@@ -1,0 +1,10 @@
+{
+  "name": "@vk/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "vk": "./bin/vk.js" },
+  "scripts": { "build": "tsc -p ." },
+  "dependencies": { "commander": "^12.1.0", "open": "^10.1.0" },
+  "devDependencies": { "typescript": "^5.6.3", "@types/node": "^22.9.0" }
+}

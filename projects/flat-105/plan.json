@@ -1,0 +1,1209 @@
+{
+ "version": 1,
+ "units": "m",
+ "source": {
+  "kind": "image",
+  "file": "input/floor-plan.jpg",
+  "page": 0,
+  "units_per_m": 101.4,
+  "origin": [
+   297,
+   1285
+  ],
+  "crop": [
+   288,
+   212,
+   1112,
+   1292
+  ],
+  "ignore": [
+   [
+    895,
+    365,
+    1095,
+    600
+   ],
+   [
+    316,
+    632,
+    366,
+    736
+   ],
+   [
+    445,
+    788,
+    495,
+    803
+   ],
+   [
+    336,
+    935,
+    356,
+    990
+   ],
+   [
+    586,
+    1075,
+    610,
+    1148
+   ],
+   [
+    965,
+    214,
+    1046,
+    240
+   ]
+  ]
+ },
+ "site": {
+  "north_deg": 180,
+  "floor": 0,
+  "unit": "105",
+  "entrance": "d_main",
+  "outside": [
+   {
+    "kind": "corridor",
+    "polygon": [
+     [
+      2.0,
+      -2.0
+     ],
+     [
+      8.0,
+      -2.0
+     ],
+     [
+      8.0,
+      -0.05
+     ],
+     [
+      2.0,
+      -0.05
+     ]
+    ]
+   },
+   {
+    "kind": "corridor",
+    "polygon": [
+     [
+      7.95,
+      -2.0
+     ],
+     [
+      9.95,
+      -2.0
+     ],
+     [
+      9.95,
+      10.6
+     ],
+     [
+      7.95,
+      10.6
+     ]
+    ]
+   },
+   {
+    "kind": "garden",
+    "polygon": [
+     [
+      -2.9,
+      -0.05
+     ],
+     [
+      -0.05,
+      -0.05
+     ],
+     [
+      -0.05,
+      12.0
+     ],
+     [
+      -2.9,
+      12.0
+     ]
+    ]
+   },
+   {
+    "kind": "open_to_sky",
+    "polygon": [
+     [
+      0.0,
+      10.6
+     ],
+     [
+      5.95,
+      10.6
+     ],
+     [
+      5.95,
+      12.1
+     ],
+     [
+      0.0,
+      12.1
+     ]
+    ]
+   }
+  ]
+ },
+ "defaults": {
+  "wall_height": 3.048,
+  "door_height": 2.134,
+  "window_sill": 0.9,
+  "window_height": 1.2
+ },
+ "walls": [
+  {
+   "id": "w_west",
+   "a": [
+    0.0937,
+    0.0394
+   ],
+   "b": [
+    0.0937,
+    10.4734
+   ],
+   "thickness": 0.1874,
+   "exterior": true
+  },
+  {
+   "id": "w_north",
+   "a": [
+    0.0937,
+    0.0394
+   ],
+   "b": [
+    7.9093,
+    0.0394
+   ],
+   "thickness": 0.0789,
+   "exterior": true
+  },
+  {
+   "id": "w_east",
+   "a": [
+    7.9093,
+    0.0394
+   ],
+   "b": [
+    7.9093,
+    10.4241
+   ],
+   "thickness": 0.0789,
+   "exterior": true
+  },
+  {
+   "id": "w_south1",
+   "a": [
+    0.0937,
+    10.4734
+   ],
+   "b": [
+    4.5907,
+    10.4734
+   ],
+   "thickness": 0.0789,
+   "exterior": true
+  },
+  {
+   "id": "w_south2",
+   "a": [
+    4.5907,
+    10.4241
+   ],
+   "b": [
+    7.9093,
+    10.4241
+   ],
+   "thickness": 0.1775,
+   "exterior": true
+  },
+  {
+   "id": "w_wash",
+   "a": [
+    0.0937,
+    9.2751
+   ],
+   "b": [
+    3.2742,
+    9.2751
+   ],
+   "thickness": 0.069
+  },
+  {
+   "id": "w_A_top",
+   "a": [
+    3.2742,
+    10.4734
+   ],
+   "b": [
+    3.2742,
+    6.6667
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_B_top",
+   "a": [
+    4.5907,
+    10.4734
+   ],
+   "b": [
+    4.5907,
+    6.4842
+   ],
+   "thickness": 0.069
+  },
+  {
+   "id": "w_t1_bot",
+   "a": [
+    3.2742,
+    7.8008
+   ],
+   "b": [
+    4.5907,
+    7.8008
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_mbed_bot",
+   "a": [
+    4.5907,
+    6.4842
+   ],
+   "b": [
+    7.9093,
+    6.4842
+   ],
+   "thickness": 0.069
+  },
+  {
+   "id": "w_puja_top",
+   "a": [
+    0.0937,
+    6.4842
+   ],
+   "b": [
+    1.8047,
+    6.4842
+   ],
+   "thickness": 0.069
+  },
+  {
+   "id": "w_puja_east",
+   "a": [
+    1.7653,
+    6.4842
+   ],
+   "b": [
+    1.7653,
+    5.1677
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_liv_top",
+   "a": [
+    0.0937,
+    5.1677
+   ],
+   "b": [
+    3.2742,
+    5.1677
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_A_bot",
+   "a": [
+    3.2742,
+    3.4911
+   ],
+   "b": [
+    3.2742,
+    0.0394
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_B_bot",
+   "a": [
+    4.5907,
+    3.4714
+   ],
+   "b": [
+    4.5907,
+    0.0394
+   ],
+   "thickness": 0.069
+  },
+  {
+   "id": "w_t2_top",
+   "a": [
+    3.2742,
+    2.9783
+   ],
+   "b": [
+    4.5907,
+    2.9783
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_t2_bot",
+   "a": [
+    3.2742,
+    0.7594
+   ],
+   "b": [
+    4.5907,
+    0.7594
+   ],
+   "thickness": 0.0789
+  },
+  {
+   "id": "w_cbed_top",
+   "a": [
+    4.5907,
+    3.4714
+   ],
+   "b": [
+    7.9093,
+    3.4714
+   ],
+   "thickness": 0.0789
+  }
+ ],
+ "openings": [
+  {
+   "id": "d_main",
+   "wall": "w_north",
+   "type": "door",
+   "offset": 0.7742,
+   "width": 1.0059,
+   "hinge": "a",
+   "swing": "left",
+   "connects": [
+    "living",
+    "outside"
+   ]
+  },
+  {
+   "id": "win_cbed_n",
+   "wall": "w_north",
+   "type": "window",
+   "offset": 5.1233,
+   "width": 0.8679
+  },
+  {
+   "id": "win_liv",
+   "wall": "w_west",
+   "type": "window",
+   "offset": 2.574,
+   "width": 1.4793
+  },
+  {
+   "id": "v_puja",
+   "wall": "w_west",
+   "type": "ventilator",
+   "offset": 5.8383,
+   "width": 0.5325,
+   "sill": 1.2,
+   "height": 0.6
+  },
+  {
+   "id": "win_kit",
+   "wall": "w_west",
+   "type": "window",
+   "offset": 7.1893,
+   "width": 0.927,
+   "sill": 1.05,
+   "height": 1.05
+  },
+  {
+   "id": "win_din",
+   "wall": "w_east",
+   "type": "window",
+   "offset": 4.4625,
+   "width": 1.2426
+  },
+  {
+   "id": "grille_wash",
+   "wall": "w_south1",
+   "type": "window",
+   "offset": 1.6124,
+   "width": 2.86,
+   "sill": 0.9,
+   "height": 1.5
+  },
+  {
+   "id": "v_t1",
+   "wall": "w_south1",
+   "type": "ventilator",
+   "offset": 3.8314,
+   "width": 0.5917,
+   "sill": 1.8,
+   "height": 0.6
+  },
+  {
+   "id": "win_mbed_s",
+   "wall": "w_south2",
+   "type": "window",
+   "offset": 0.784,
+   "width": 1.1834
+  },
+  {
+   "id": "win_kit_wash",
+   "wall": "w_wash",
+   "type": "window",
+   "offset": 0.9813,
+   "width": 0.9467,
+   "sill": 1.05,
+   "height": 1.05
+  },
+  {
+   "id": "d_wash",
+   "wall": "w_wash",
+   "type": "door",
+   "offset": 2.2436,
+   "width": 0.8284,
+   "hinge": "b",
+   "swing": "left",
+   "connects": [
+    "kitchen",
+    "wash"
+   ]
+  },
+  {
+   "id": "d_t1",
+   "wall": "w_B_top",
+   "type": "door",
+   "offset": 1.3363,
+   "width": 0.7988,
+   "hinge": "b",
+   "swing": "right",
+   "connects": [
+    "mbed",
+    "toilet1"
+   ]
+  },
+  {
+   "id": "d_mbed",
+   "wall": "w_B_top",
+   "type": "door",
+   "offset": 3.3629,
+   "width": 0.8481,
+   "hinge": "b",
+   "swing": "left",
+   "connects": [
+    "dining",
+    "mbed"
+   ]
+  },
+  {
+   "id": "d_puja",
+   "wall": "w_puja_east",
+   "type": "door",
+   "offset": 0.641,
+   "width": 0.9369,
+   "hinge": "a",
+   "swing": "right",
+   "leaves": 2,
+   "connects": [
+    "dining",
+    "puja"
+   ]
+  },
+  {
+   "id": "d_t2",
+   "wall": "w_t2_top",
+   "type": "door",
+   "offset": 0.5276,
+   "width": 0.8974,
+   "hinge": "a",
+   "swing": "right",
+   "connects": [
+    "dining",
+    "toilet2"
+   ]
+  },
+  {
+   "id": "v_t2",
+   "wall": "w_t2_bot",
+   "type": "ventilator",
+   "offset": 0.4241,
+   "width": 0.641,
+   "sill": 1.8,
+   "height": 0.6
+  },
+  {
+   "id": "d_cbed",
+   "wall": "w_cbed_top",
+   "type": "door",
+   "offset": 0.646,
+   "width": 0.8481,
+   "hinge": "a",
+   "swing": "right",
+   "connects": [
+    "dining",
+    "cbed"
+   ]
+  }
+ ],
+ "rooms": [
+  {
+   "id": "wash",
+   "name": "Wash",
+   "type": "wash",
+   "polygon": [
+    [
+     0.1874,
+     9.3097
+    ],
+    [
+     3.2347,
+     9.3097
+    ],
+    [
+     3.2347,
+     10.4339
+    ],
+    [
+     0.1874,
+     10.4339
+    ]
+   ]
+  },
+  {
+   "id": "kitchen",
+   "name": "Kitchen",
+   "type": "kitchen",
+   "polygon": [
+    [
+     0.1874,
+     6.5187
+    ],
+    [
+     3.2347,
+     6.5187
+    ],
+    [
+     3.2347,
+     9.2406
+    ],
+    [
+     0.1874,
+     9.2406
+    ]
+   ],
+   "labeled": {
+    "text": "10'0\"x8'10½\"",
+    "w": 3.048,
+    "l": 2.7051
+   }
+  },
+  {
+   "id": "toilet1",
+   "name": "Toilet",
+   "type": "toilet",
+   "polygon": [
+    [
+     3.3136,
+     7.8402
+    ],
+    [
+     4.5562,
+     7.8402
+    ],
+    [
+     4.5562,
+     10.4339
+    ],
+    [
+     3.3136,
+     10.4339
+    ]
+   ],
+   "labeled": {
+    "text": "4'x8'6\"",
+    "w": 1.2192,
+    "l": 2.5908
+   }
+  },
+  {
+   "id": "mbed",
+   "name": "M.Bedroom",
+   "type": "master_bedroom",
+   "polygon": [
+    [
+     4.6252,
+     6.5187
+    ],
+    [
+     7.8698,
+     6.5187
+    ],
+    [
+     7.8698,
+     10.3353
+    ],
+    [
+     4.6252,
+     10.3353
+    ]
+   ],
+   "labeled": {
+    "text": "10'7½\"x12'6\"",
+    "w": 3.2385,
+    "l": 3.81
+   }
+  },
+  {
+   "id": "puja",
+   "name": "Puja",
+   "type": "puja",
+   "polygon": [
+    [
+     0.1874,
+     5.2071
+    ],
+    [
+     1.7258,
+     5.2071
+    ],
+    [
+     1.7258,
+     6.4497
+    ],
+    [
+     0.1874,
+     6.4497
+    ]
+   ],
+   "labeled": {
+    "text": "5'0\"x4'0\"",
+    "w": 1.524,
+    "l": 1.2192
+   }
+  },
+  {
+   "id": "dining",
+   "name": "Dining",
+   "type": "dining",
+   "polygon": [
+    [
+     3.3136,
+     7.7613
+    ],
+    [
+     3.3136,
+     6.4497
+    ],
+    [
+     1.8047,
+     6.4497
+    ],
+    [
+     1.8047,
+     5.1282
+    ],
+    [
+     3.3136,
+     5.1282
+    ],
+    [
+     3.3136,
+     3.0178
+    ],
+    [
+     4.5562,
+     3.0178
+    ],
+    [
+     4.5562,
+     3.5108
+    ],
+    [
+     7.8698,
+     3.5108
+    ],
+    [
+     7.8698,
+     6.4497
+    ],
+    [
+     4.5562,
+     6.4497
+    ],
+    [
+     4.5562,
+     7.7613
+    ]
+   ],
+   "labeled": {
+    "text": "19'3\"x9'7½\"",
+    "gate": false,
+    "w": 5.8674,
+    "l": 2.9337
+   }
+  },
+  {
+   "id": "living",
+   "name": "Living",
+   "type": "living",
+   "polygon": [
+    [
+     0.1874,
+     0.0789
+    ],
+    [
+     3.2347,
+     0.0789
+    ],
+    [
+     3.2347,
+     5.1282
+    ],
+    [
+     0.1874,
+     5.1282
+    ]
+   ],
+   "labeled": {
+    "text": "10'0\"x16'7½\"",
+    "w": 3.048,
+    "l": 5.0673
+   }
+  },
+  {
+   "id": "toilet2",
+   "name": "Toilet",
+   "type": "toilet",
+   "polygon": [
+    [
+     3.3136,
+     0.7988
+    ],
+    [
+     4.5562,
+     0.7988
+    ],
+    [
+     4.5562,
+     2.9389
+    ],
+    [
+     3.3136,
+     2.9389
+    ]
+   ],
+   "labeled": {
+    "text": "7'x4'",
+    "w": 2.1336,
+    "l": 1.2192
+   }
+  },
+  {
+   "id": "duct",
+   "name": "Duct",
+   "type": "other",
+   "polygon": [
+    [
+     3.3136,
+     0.0789
+    ],
+    [
+     4.5562,
+     0.0789
+    ],
+    [
+     4.5562,
+     0.7199
+    ],
+    [
+     3.3136,
+     0.7199
+    ]
+   ]
+  },
+  {
+   "id": "cbed",
+   "name": "C.Bedroom",
+   "type": "bedroom",
+   "polygon": [
+    [
+     4.6252,
+     0.0789
+    ],
+    [
+     7.8698,
+     0.0789
+    ],
+    [
+     7.8698,
+     3.432
+    ],
+    [
+     4.6252,
+     3.432
+    ]
+   ],
+   "labeled": {
+    "text": "10'7½\"x11'0\"",
+    "w": 3.2385,
+    "l": 3.3528
+   }
+  }
+ ],
+ "fixtures": [
+  {
+   "kind": "washing_machine",
+   "room": "wash",
+   "center": [
+    0.646,
+    9.8373
+   ],
+   "size": [
+    0.542,
+    0.641
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "counter_l",
+   "room": "kitchen",
+   "center": [
+    1.0552,
+    7.9389
+   ],
+   "size": [
+    1.736,
+    2.604
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "hob",
+   "room": "kitchen",
+   "center": [
+    0.5128,
+    8.3432
+   ],
+   "size": [
+    0.533,
+    0.611
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "sink",
+   "room": "kitchen",
+   "center": [
+    0.4832,
+    7.1006
+   ],
+   "size": [
+    0.513,
+    0.533
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "tall_cabinet",
+   "room": "kitchen",
+   "center": [
+    2.9882,
+    8.3974
+   ],
+   "size": [
+    0.434,
+    1.607
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "fridge",
+   "room": "kitchen",
+   "center": [
+    2.8649,
+    7.1252
+   ],
+   "size": [
+    0.641,
+    0.838
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "wc",
+   "room": "toilet1",
+   "center": [
+    3.9744,
+    10.0838
+   ],
+   "size": [
+    0.493,
+    0.542
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "basin",
+   "room": "toilet1",
+   "center": [
+    3.5404,
+    9.2357
+   ],
+   "size": [
+    0.316,
+    0.464
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "wardrobe",
+   "room": "mbed",
+   "center": [
+    6.9034,
+    10.0838
+   ],
+   "size": [
+    1.874,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "bed_queen",
+   "room": "mbed",
+   "center": [
+    6.8836,
+    8.146
+   ],
+   "size": [
+    1.775,
+    1.598
+   ],
+   "rotation": 90
+  },
+  {
+   "kind": "side_table",
+   "room": "mbed",
+   "center": [
+    7.574,
+    9.1963
+   ],
+   "size": [
+    0.493,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "side_table",
+   "room": "mbed",
+   "center": [
+    7.574,
+    7.0266
+   ],
+   "size": [
+    0.493,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "mandir",
+   "room": "puja",
+   "center": [
+    0.4241,
+    5.9665
+   ],
+   "size": [
+    0.434,
+    0.888
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "dining_table_3x2",
+   "room": "dining",
+   "center": [
+    6.2081,
+    5.0296
+   ],
+   "size": [
+    1.746,
+    1.183
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "crockery_unit",
+   "room": "dining",
+   "center": [
+    6.3708,
+    6.2574
+   ],
+   "size": [
+    2.071,
+    0.266
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "wash_basin",
+   "room": "dining",
+   "center": [
+    7.6233,
+    6.2377
+   ],
+   "size": [
+    0.394,
+    0.306
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "tv_unit",
+   "room": "living",
+   "center": [
+    1.5582,
+    4.8915
+   ],
+   "size": [
+    2.702,
+    0.454
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "sofa_3",
+   "room": "living",
+   "center": [
+    0.5917,
+    2.9191
+   ],
+   "size": [
+    0.69,
+    2.288
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "sofa_3",
+   "room": "living",
+   "center": [
+    2.8205,
+    1.9724
+   ],
+   "size": [
+    0.69,
+    2.268
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "coffee_table",
+   "room": "living",
+   "center": [
+    1.9625,
+    1.8245
+   ],
+   "size": [
+    0.552,
+    1.085
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "armchair",
+   "room": "living",
+   "center": [
+    1.8639,
+    0.4684
+   ],
+   "size": [
+    0.769,
+    0.641
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "side_table",
+   "room": "living",
+   "center": [
+    2.7416,
+    0.4191
+   ],
+   "size": [
+    0.69,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "wc",
+   "room": "toilet2",
+   "center": [
+    3.9497,
+    1.1095
+   ],
+   "size": [
+    0.542,
+    0.542
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "basin",
+   "room": "toilet2",
+   "center": [
+    4.3294,
+    2.5394
+   ],
+   "size": [
+    0.316,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "wardrobe",
+   "room": "cbed",
+   "center": [
+    6.7456,
+    3.1805
+   ],
+   "size": [
+    2.189,
+    0.444
+   ],
+   "rotation": 0
+  },
+  {
+   "kind": "bed_queen",
+   "room": "cbed",
+   "center": [
+    6.859,
+    1.4053
+   ],
+   "size": [
+    1.824,
+    1.627
+   ],
+   "rotation": 90
+  }
+ ],
+ "notes": [
+  "Source is a raster marketing render (JPG), not a vector PDF — expect ±2-3 cm accuracy.",
+  "Scale 101.4 px/m calibrated from Kitchen 10'0\", both bedrooms 10'7½\", C.Bedroom 11'0\" and Dining 9'7½\" (all agree within 0.5%).",
+  "North points DOWN the drawing (user: north-facing entrance; main door 105 opens from the bottom corridor). Garden is on the east (left of drawing).",
+  "Drawing shows ~8 cm internal walls (render convention). Kept as drawn so room sizes match the labels; the 3D engine may thicken visually.",
+  "Dining label 19'3\" spans the L-shaped open area — nominal, not gated.",
+  "Wash top edge is drawn as a grille/open screen — modelled as a 1.5 m tall opening.",
+  "Duct is a closed service shaft — not walkable."
+ ]
+}

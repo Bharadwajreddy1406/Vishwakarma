@@ -1,0 +1,1594 @@
+{
+  "generators": [
+    {
+      "id": "armchair",
+      "file": "armchair.ts",
+      "version": 1,
+      "tags": [
+        "living",
+        "furniture",
+        "seating",
+        "dynamic"
+      ],
+      "description": "Single-seat armchair (a 1-seat sofa with a wider seat). Dynamic: can be pushed.",
+      "params": {
+        "seatWidth": {
+          "type": "number",
+          "default": 0.7,
+          "min": 0.55,
+          "max": 0.9
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.8,
+          "min": 0.65,
+          "max": 1
+        }
+      },
+      "slots": {
+        "fabric": "fabric-grey",
+        "cushion": "fabric-cushion-white",
+        "accent": "fabric-mustard",
+        "wood": "wood-walnut"
+      },
+      "physics": "dynamic"
+    },
+    {
+      "id": "basin",
+      "file": "basin.ts",
+      "version": 1,
+      "tags": [
+        "bathroom",
+        "dining",
+        "sanitary",
+        "interactive"
+      ],
+      "description": "Wash basin: wall-mounted, counter-top on a vanity (cabinet doors open), or pedestal. Mirror and pillar tap. Back to wall (-z).",
+      "params": {
+        "style": {
+          "type": "enum",
+          "default": "wall",
+          "options": [
+            "wall",
+            "vanity",
+            "pedestal"
+          ]
+        },
+        "width": {
+          "type": "number",
+          "default": 0.5,
+          "min": 0.35,
+          "max": 1.2
+        },
+        "mirror": {
+          "type": "bool",
+          "default": true
+        }
+      },
+      "slots": {
+        "ceramic": "ceramic-white",
+        "chrome": "chrome",
+        "mirror": "mirror",
+        "carcass": "laminate-white-gloss",
+        "front": "laminate-wood",
+        "counter": "granite-black"
+      }
+    },
+    {
+      "id": "bed",
+      "file": "bed.ts",
+      "version": 1,
+      "tags": [
+        "bedroom",
+        "furniture",
+        "bed",
+        "interactive"
+      ],
+      "description": "Bed with frame, upholstered headboard, mattress, duvet, pillows; optional storage drawers. Headboard at -z, foot toward +z.",
+      "params": {
+        "size": {
+          "type": "enum",
+          "default": "queen",
+          "options": [
+            "single",
+            "double",
+            "queen",
+            "king"
+          ]
+        },
+        "headboard": {
+          "type": "enum",
+          "default": "upholstered",
+          "options": [
+            "upholstered",
+            "wood",
+            "none"
+          ]
+        },
+        "storage": {
+          "type": "bool",
+          "default": true,
+          "description": "two pull-out drawers at the foot"
+        },
+        "pillows": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 4,
+          "description": "0 = auto"
+        }
+      },
+      "slots": {
+        "wood": "wood-walnut",
+        "fabric": "fabric-beige",
+        "linen": "bed-linen-white",
+        "duvet": "bed-linen-sand",
+        "cushion": "fabric-cushion-white",
+        "handle": "metal-steel"
+      }
+    },
+    {
+      "id": "chair",
+      "file": "chair.ts",
+      "version": 1,
+      "tags": [
+        "furniture",
+        "chair",
+        "dining",
+        "dynamic"
+      ],
+      "description": "Dining / study chair. Front faces +z. Dynamic by default (you can push it around).",
+      "params": {
+        "style": {
+          "type": "enum",
+          "default": "upholstered",
+          "options": [
+            "wood",
+            "upholstered"
+          ]
+        },
+        "seatHeight": {
+          "type": "number",
+          "default": 0.46
+        },
+        "width": {
+          "type": "number",
+          "default": 0.45
+        }
+      },
+      "slots": {
+        "wood": "wood-teak",
+        "fabric": "fabric-beige"
+      },
+      "physics": "dynamic"
+    },
+    {
+      "id": "coffee-table",
+      "file": "coffee-table.ts",
+      "version": 1,
+      "tags": [
+        "living",
+        "furniture",
+        "table"
+      ],
+      "description": "Low centre table, wood frame with inset top (wood / glass / marble) and a lower shelf; small decor bowl.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 1.1,
+          "min": 0.5,
+          "max": 1.6
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.55,
+          "min": 0.4,
+          "max": 1
+        },
+        "height": {
+          "type": "number",
+          "default": 0.42,
+          "min": 0.3,
+          "max": 0.5
+        },
+        "top": {
+          "type": "enum",
+          "default": "glass",
+          "options": [
+            "wood",
+            "glass",
+            "marble"
+          ]
+        }
+      },
+      "slots": {
+        "wood": "wood-teak",
+        "glass": "glass-clear",
+        "marble": "marble-white",
+        "decor": "metal-brass",
+        "plant": "plant-green"
+      }
+    },
+    {
+      "id": "decor",
+      "file": "decor.ts",
+      "version": 1,
+      "tags": [
+        "decor",
+        "light",
+        "living",
+        "bathroom"
+      ],
+      "description": "Small decor & fixtures by `kind`: rug, plant (potted), ceiling-fan (spins), ceiling-light (real light), shower (head + glass partition), towel-rail. Size via width/depth/height.",
+      "params": {
+        "kind": {
+          "type": "enum",
+          "default": "plant",
+          "options": [
+            "rug",
+            "plant",
+            "ceiling-fan",
+            "ceiling-light",
+            "shower",
+            "towel-rail"
+          ]
+        },
+        "width": {
+          "type": "number",
+          "default": 1.6,
+          "min": 0.2,
+          "max": 4
+        },
+        "depth": {
+          "type": "number",
+          "default": 1.2,
+          "min": 0.2,
+          "max": 4
+        },
+        "height": {
+          "type": "number",
+          "default": 3,
+          "description": "ceiling height for ceiling fixtures; plant height otherwise"
+        },
+        "intensity": {
+          "type": "number",
+          "default": 6,
+          "description": "ceiling-light intensity (candela-ish)"
+        }
+      },
+      "slots": {
+        "rug": "rug-grey",
+        "pot": "terracotta",
+        "plant": "plant-green",
+        "metal": "metal-steel",
+        "blade": "wood-walnut",
+        "lamp": "lamp-warm",
+        "chrome": "chrome",
+        "glass": "glass-clear"
+      }
+    },
+    {
+      "id": "dining-table",
+      "file": "dining-table.ts",
+      "version": 1,
+      "tags": [
+        "furniture",
+        "dining",
+        "table",
+        "parametric-mxn"
+      ],
+      "description": "Rectangular dining table sized from its seating: `seats` per long side x `sides` (1|2) + optional end seats. 3x2 = 6-seater. Chairs are spawned as separate dynamic objects (pushable).",
+      "params": {
+        "seats": {
+          "type": "int",
+          "default": 2,
+          "min": 1,
+          "max": 6,
+          "description": "chairs along each long side"
+        },
+        "sides": {
+          "type": "int",
+          "default": 2,
+          "min": 1,
+          "max": 2,
+          "description": "long sides with chairs"
+        },
+        "endSeats": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 2,
+          "description": "chairs at the short ends"
+        },
+        "seatPitch": {
+          "type": "number",
+          "default": 0.6,
+          "min": 0.45,
+          "max": 0.8,
+          "description": "table length per chair"
+        },
+        "width": {
+          "type": "number",
+          "default": 0.9,
+          "min": 0.6,
+          "max": 1.2
+        },
+        "height": {
+          "type": "number",
+          "default": 0.75
+        },
+        "top": {
+          "type": "enum",
+          "default": "wood",
+          "options": [
+            "wood",
+            "glass",
+            "marble"
+          ]
+        },
+        "chairs": {
+          "type": "bool",
+          "default": true
+        },
+        "chairStyle": {
+          "type": "enum",
+          "default": "upholstered",
+          "options": [
+            "wood",
+            "upholstered"
+          ]
+        }
+      },
+      "slots": {
+        "wood": "wood-teak",
+        "glass": "glass-clear",
+        "marble": "marble-white",
+        "fabric": "fabric-beige"
+      }
+    },
+    {
+      "id": "door",
+      "file": "door.ts",
+      "version": 1,
+      "tags": [
+        "door",
+        "opening",
+        "interactive"
+      ],
+      "description": "Hinged door with frame (chaukhat). Single or double leaf; styles: flush, panel, main (teak, raised panels, brass), bathroom (frosted strip), puja (lattice jaali + bells). Local: opening centred at x=0, floor y=0, wall centre z=0; front = +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.9,
+          "min": 0.5,
+          "max": 2.4,
+          "description": "clear opening width (m)"
+        },
+        "height": {
+          "type": "number",
+          "default": 2.1,
+          "min": 1.6,
+          "max": 2.7
+        },
+        "wallThickness": {
+          "type": "number",
+          "default": 0.115,
+          "min": 0.05,
+          "max": 0.4
+        },
+        "leaves": {
+          "type": "int",
+          "default": 1,
+          "min": 1,
+          "max": 2
+        },
+        "hinge": {
+          "type": "enum",
+          "default": "left",
+          "options": [
+            "left",
+            "right"
+          ],
+          "description": "hinge side seen from the front (+z)"
+        },
+        "swing": {
+          "type": "enum",
+          "default": "front",
+          "options": [
+            "front",
+            "back"
+          ],
+          "description": "side the leaf opens into"
+        },
+        "style": {
+          "type": "enum",
+          "default": "panel",
+          "options": [
+            "flush",
+            "panel",
+            "main",
+            "bathroom",
+            "puja"
+          ]
+        },
+        "open": {
+          "type": "bool",
+          "default": false
+        }
+      },
+      "slots": {
+        "door": "door-wood-veneer",
+        "frame": "wood-teak",
+        "handle": "metal-steel",
+        "brass": "metal-brass",
+        "glass": "glass-frosted"
+      }
+    },
+    {
+      "id": "fridge",
+      "file": "fridge.ts",
+      "version": 1,
+      "tags": [
+        "kitchen",
+        "appliance",
+        "interactive"
+      ],
+      "description": "Refrigerator: single door, double door (freezer on top) or side-by-side. Doors open with F to reveal lit shelves, door bins and some groceries.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.68,
+          "min": 0.5,
+          "max": 1
+        },
+        "height": {
+          "type": "number",
+          "default": 1.75,
+          "min": 1.2,
+          "max": 1.95
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.68,
+          "min": 0.55,
+          "max": 0.8
+        },
+        "style": {
+          "type": "enum",
+          "default": "double",
+          "options": [
+            "single",
+            "double",
+            "side-by-side"
+          ]
+        },
+        "hinge": {
+          "type": "enum",
+          "default": "right",
+          "options": [
+            "left",
+            "right"
+          ]
+        }
+      },
+      "slots": {
+        "body": "appliance-silver",
+        "inner": "appliance-white",
+        "handle": "metal-steel",
+        "shelf": "glass-clear",
+        "light": "lamp-warm",
+        "food1": "marigold",
+        "food2": "plant-green",
+        "food3": "kumkum-red"
+      }
+    },
+    {
+      "id": "kitchen-counter",
+      "file": "kitchen-counter.ts",
+      "version": 1,
+      "tags": [
+        "kitchen",
+        "counter",
+        "cabinet",
+        "interactive",
+        "parametric-mxn"
+      ],
+      "description": "Straight modular kitchen run: granite top, base cabinets (doors + top drawer row), optional sink, gas hob, wall cabinets and dado backsplash. Build an L-kitchen from two runs. Front faces +z.",
+      "params": {
+        "length": {
+          "type": "number",
+          "default": 2.4,
+          "min": 0.6,
+          "max": 6
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.6,
+          "min": 0.45,
+          "max": 0.75
+        },
+        "height": {
+          "type": "number",
+          "default": 0.85
+        },
+        "sinkAt": {
+          "type": "number",
+          "default": -1,
+          "description": "sink centre from left end (m); -1 = none"
+        },
+        "hobAt": {
+          "type": "number",
+          "default": -1,
+          "description": "hob centre from left end (m); -1 = none"
+        },
+        "hobBurners": {
+          "type": "int",
+          "default": 3,
+          "min": 2,
+          "max": 5
+        },
+        "wallCabinets": {
+          "type": "bool",
+          "default": true
+        },
+        "backsplash": {
+          "type": "bool",
+          "default": true
+        },
+        "chimney": {
+          "type": "bool",
+          "default": true,
+          "description": "hood above the hob"
+        }
+      },
+      "slots": {
+        "counter": "granite-black",
+        "carcass": "laminate-white-gloss",
+        "front": "laminate-sage",
+        "handle": "metal-steel",
+        "steel": "metal-steel",
+        "hob": "metal-black",
+        "dado": "tile-kitchen-dado",
+        "glass": "glass-clear"
+      }
+    },
+    {
+      "id": "mandir",
+      "file": "mandir.ts",
+      "version": 1,
+      "tags": [
+        "puja",
+        "furniture",
+        "interactive",
+        "indian"
+      ],
+      "description": "Wooden pooja mandir: base cabinet (doors), sanctum with marble floor, brass idols, diyas with live flame, bells, tiered shikhara top, marigold garland. Floor-standing or wall-mounted. Front faces +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.9,
+          "min": 0.45,
+          "max": 2
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.45,
+          "min": 0.3,
+          "max": 0.7
+        },
+        "height": {
+          "type": "number",
+          "default": 1.9,
+          "min": 0.9,
+          "max": 2.4
+        },
+        "mount": {
+          "type": "enum",
+          "default": "floor",
+          "options": [
+            "floor",
+            "wall"
+          ]
+        },
+        "idols": {
+          "type": "int",
+          "default": 3,
+          "min": 1,
+          "max": 5
+        }
+      },
+      "slots": {
+        "wood": "wood-teak",
+        "marble": "marble-white",
+        "brass": "metal-brass",
+        "flame": "flame",
+        "flower": "marigold",
+        "red": "kumkum-red",
+        "handle": "metal-brass"
+      }
+    },
+    {
+      "id": "side-table",
+      "file": "side-table.ts",
+      "version": 1,
+      "tags": [
+        "bedroom",
+        "living",
+        "furniture",
+        "interactive",
+        "light"
+      ],
+      "description": "Bedside / side table with a pull-out drawer and optional table lamp (real light). Front faces +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.45,
+          "min": 0.3,
+          "max": 0.7
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.4,
+          "min": 0.3,
+          "max": 0.6
+        },
+        "height": {
+          "type": "number",
+          "default": 0.55,
+          "min": 0.4,
+          "max": 0.75
+        },
+        "lamp": {
+          "type": "bool",
+          "default": true
+        },
+        "drawer": {
+          "type": "bool",
+          "default": true
+        }
+      },
+      "slots": {
+        "wood": "wood-walnut",
+        "handle": "metal-brass",
+        "shade": "fabric-cushion-white",
+        "base": "metal-brass",
+        "lamp": "lamp-warm"
+      }
+    },
+    {
+      "id": "sideboard",
+      "file": "sideboard.ts",
+      "version": 1,
+      "tags": [
+        "dining",
+        "storage",
+        "furniture",
+        "interactive"
+      ],
+      "description": "Crockery unit / console / sideboard: base cabinet with shutters + drawers, optional glass-front upper display. Front faces +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 1.8,
+          "min": 0.6,
+          "max": 3.5
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.4,
+          "min": 0.25,
+          "max": 0.6
+        },
+        "height": {
+          "type": "number",
+          "default": 0.85,
+          "min": 0.5,
+          "max": 1
+        },
+        "drawers": {
+          "type": "int",
+          "default": 1,
+          "min": 0,
+          "max": 2
+        },
+        "upper": {
+          "type": "bool",
+          "default": false,
+          "description": "glass-front upper crockery display"
+        }
+      },
+      "slots": {
+        "carcass": "laminate-wood",
+        "front": "wood-teak",
+        "handle": "metal-brass",
+        "glass": "glass-clear",
+        "top": "granite-black"
+      }
+    },
+    {
+      "id": "sofa",
+      "file": "sofa.ts",
+      "version": 1,
+      "tags": [
+        "living",
+        "furniture",
+        "sofa",
+        "seating",
+        "parametric-mxn"
+      ],
+      "description": "Modular sofa: N seats (1 = armchair), arms, seat + back cushions, throw pillows, wooden legs. Front faces +z.",
+      "params": {
+        "seats": {
+          "type": "int",
+          "default": 3,
+          "min": 1,
+          "max": 5
+        },
+        "seatWidth": {
+          "type": "number",
+          "default": 0.62,
+          "min": 0.5,
+          "max": 0.9
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.88,
+          "min": 0.7,
+          "max": 1.1
+        },
+        "arms": {
+          "type": "bool",
+          "default": true
+        },
+        "throwPillows": {
+          "type": "int",
+          "default": -1,
+          "min": -1,
+          "max": 6,
+          "description": "-1 = auto"
+        }
+      },
+      "slots": {
+        "fabric": "fabric-grey",
+        "cushion": "fabric-cushion-white",
+        "accent": "fabric-mustard",
+        "wood": "wood-walnut"
+      }
+    },
+    {
+      "id": "tall-cabinet",
+      "file": "tall-cabinet.ts",
+      "version": 1,
+      "tags": [
+        "kitchen",
+        "storage",
+        "cabinet",
+        "interactive"
+      ],
+      "description": "Tall pantry / utility unit with shelves and hinged shutters (+ optional drawers). Front faces +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.45,
+          "min": 0.3,
+          "max": 1.2
+        },
+        "height": {
+          "type": "number",
+          "default": 2.1,
+          "min": 1,
+          "max": 2.6
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.6,
+          "min": 0.3,
+          "max": 0.7
+        },
+        "doors": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 4,
+          "description": "0 = auto"
+        },
+        "drawers": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 4
+        },
+        "shelves": {
+          "type": "int",
+          "default": 4,
+          "min": 0,
+          "max": 8
+        }
+      },
+      "slots": {
+        "carcass": "laminate-white-gloss",
+        "front": "laminate-wood",
+        "handle": "metal-steel"
+      }
+    },
+    {
+      "id": "tv-unit",
+      "file": "tv-unit.ts",
+      "version": 1,
+      "tags": [
+        "living",
+        "furniture",
+        "media",
+        "interactive"
+      ],
+      "description": "Low TV console with drawers/shutters, wall panel and a wall-mounted flat TV (size in inches). Front faces +z (stand with back to wall).",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 2,
+          "min": 0.8,
+          "max": 3.5
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.4,
+          "min": 0.3,
+          "max": 0.55
+        },
+        "height": {
+          "type": "number",
+          "default": 0.45,
+          "min": 0.3,
+          "max": 0.7
+        },
+        "tvInches": {
+          "type": "int",
+          "default": 55,
+          "min": 24,
+          "max": 85
+        },
+        "panel": {
+          "type": "bool",
+          "default": true,
+          "description": "decor back panel on the wall"
+        }
+      },
+      "slots": {
+        "carcass": "laminate-white-gloss",
+        "front": "laminate-wood",
+        "handle": "metal-black",
+        "panel": "wood-walnut",
+        "screen": "screen-black",
+        "bezel": "plastic-black"
+      }
+    },
+    {
+      "id": "wardrobe",
+      "file": "wardrobe.ts",
+      "version": 1,
+      "tags": [
+        "furniture",
+        "storage",
+        "bedroom",
+        "interactive",
+        "parametric-mxn"
+      ],
+      "description": "Built-in wardrobe: N hinged shutters (auto from width), hanging rod + shelves inside, optional drawers row and loft cabinets above. Every shutter opens with F.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 1.8,
+          "min": 0.45,
+          "max": 4
+        },
+        "height": {
+          "type": "number",
+          "default": 2.1,
+          "min": 1.2,
+          "max": 2.4
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.6,
+          "min": 0.35,
+          "max": 0.7
+        },
+        "doors": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 8,
+          "description": "0 = auto (~0.5 m per shutter)"
+        },
+        "drawers": {
+          "type": "int",
+          "default": 0,
+          "min": 0,
+          "max": 3
+        },
+        "loft": {
+          "type": "bool",
+          "default": true,
+          "description": "loft cabinet above, up to ceiling"
+        },
+        "ceiling": {
+          "type": "number",
+          "default": 3
+        }
+      },
+      "slots": {
+        "carcass": "laminate-white-gloss",
+        "front": "laminate-wood",
+        "handle": "metal-steel"
+      }
+    },
+    {
+      "id": "washing-machine",
+      "file": "washing-machine.ts",
+      "version": 1,
+      "tags": [
+        "utility",
+        "appliance",
+        "interactive"
+      ],
+      "description": "Front-load washing machine, round glass door opens with F, drum visible. Front faces +z.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 0.6
+        },
+        "height": {
+          "type": "number",
+          "default": 0.85
+        },
+        "depth": {
+          "type": "number",
+          "default": 0.56
+        }
+      },
+      "slots": {
+        "body": "appliance-white",
+        "trim": "metal-steel",
+        "glass": "glass-clear",
+        "drum": "metal-steel",
+        "panel": "plastic-black"
+      }
+    },
+    {
+      "id": "wc",
+      "file": "wc.ts",
+      "version": 1,
+      "tags": [
+        "bathroom",
+        "sanitary",
+        "interactive"
+      ],
+      "description": "Western commode (floor-mounted or wall-hung) with concealed cistern panel + flush plate; seat lid opens with F; health faucet. Back to wall (-z), front +z.",
+      "params": {
+        "mount": {
+          "type": "enum",
+          "default": "wall-hung",
+          "options": [
+            "wall-hung",
+            "floor"
+          ]
+        }
+      },
+      "slots": {
+        "ceramic": "ceramic-white",
+        "chrome": "chrome",
+        "panel": "tile-wall-white-gloss"
+      }
+    },
+    {
+      "id": "window",
+      "file": "window.ts",
+      "version": 1,
+      "tags": [
+        "window",
+        "opening",
+        "interactive"
+      ],
+      "description": "Wall window. sliding (2-3 track panes, F slides), ventilator (glass louvres, toilets), grille (open MS grill, wash/utility). Optional safety grill. Local: centred x=0, y=0 = sill, z=0 = wall centre.",
+      "params": {
+        "width": {
+          "type": "number",
+          "default": 1.2,
+          "min": 0.3,
+          "max": 4
+        },
+        "height": {
+          "type": "number",
+          "default": 1.2,
+          "min": 0.3,
+          "max": 2.4
+        },
+        "wallThickness": {
+          "type": "number",
+          "default": 0.115,
+          "min": 0.05,
+          "max": 0.4
+        },
+        "style": {
+          "type": "enum",
+          "default": "sliding",
+          "options": [
+            "sliding",
+            "ventilator",
+            "grille"
+          ]
+        },
+        "panes": {
+          "type": "int",
+          "default": 2,
+          "min": 2,
+          "max": 4
+        },
+        "grill": {
+          "type": "bool",
+          "default": true,
+          "description": "MS safety grill on the outside face (typical ground floor)"
+        },
+        "sill": {
+          "type": "bool",
+          "default": true,
+          "description": "stone sill ledge inside"
+        },
+        "curtains": {
+          "type": "bool",
+          "default": false,
+          "description": "pleated curtains on a rod (inside, -z); F draws them"
+        },
+        "curtainLength": {
+          "type": "enum",
+          "default": "floor",
+          "options": [
+            "floor",
+            "sill"
+          ]
+        },
+        "sillHeight": {
+          "type": "number",
+          "default": 0.9,
+          "description": "sill above floor (for floor-length curtains)"
+        }
+      },
+      "slots": {
+        "frame": "upvc-white",
+        "glass": "glass-clear",
+        "frosted": "glass-frosted",
+        "grill": "metal-black",
+        "sill": "granite-black",
+        "curtain": "curtain-linen",
+        "rod": "metal-black"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "paint-warm-white",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "paint"
+      ],
+      "description": "plaster #eee8dd"
+    },
+    {
+      "id": "paint-exterior-white",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "exterior"
+      ],
+      "description": "plaster #f1efea"
+    },
+    {
+      "id": "paint-exterior-taupe",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "exterior",
+        "accent"
+      ],
+      "description": "plaster #9c8774"
+    },
+    {
+      "id": "paint-sage",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "accent"
+      ],
+      "description": "plaster #a9b59f"
+    },
+    {
+      "id": "paint-terracotta",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "accent"
+      ],
+      "description": "plaster #c7826a"
+    },
+    {
+      "id": "ceiling-white",
+      "file": "library.json",
+      "tags": [
+        "ceiling"
+      ],
+      "description": "plaster #f6f4ef"
+    },
+    {
+      "id": "vitrified-ivory",
+      "file": "library.json",
+      "tags": [
+        "floor",
+        "tile"
+      ],
+      "description": "2'x2' polished vitrified tile"
+    },
+    {
+      "id": "vitrified-wood-finish",
+      "file": "library.json",
+      "tags": [
+        "floor",
+        "tile",
+        "wood-look"
+      ],
+      "description": "wood-finish plank tiles"
+    },
+    {
+      "id": "laminate-oak",
+      "file": "library.json",
+      "tags": [
+        "floor",
+        "wood"
+      ],
+      "description": "wood #c39a6b"
+    },
+    {
+      "id": "tile-antiskid-beige",
+      "file": "library.json",
+      "tags": [
+        "floor",
+        "wet"
+      ],
+      "description": "tiles #c9bba3"
+    },
+    {
+      "id": "tile-wall-white-gloss",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "wet"
+      ],
+      "description": "tiles #f2f0eb"
+    },
+    {
+      "id": "tile-kitchen-dado",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "kitchen"
+      ],
+      "description": "tiles #d8d0c0"
+    },
+    {
+      "id": "marble-white",
+      "file": "library.json",
+      "tags": [
+        "floor",
+        "stone",
+        "puja"
+      ],
+      "description": "marble #f2efe9"
+    },
+    {
+      "id": "granite-black",
+      "file": "library.json",
+      "tags": [
+        "counter",
+        "stone"
+      ],
+      "description": "granite #1d1d1d"
+    },
+    {
+      "id": "granite-tan-brown",
+      "file": "library.json",
+      "tags": [
+        "counter",
+        "stone"
+      ],
+      "description": "granite #6b4a32"
+    },
+    {
+      "id": "wood-teak",
+      "file": "library.json",
+      "tags": [
+        "wood",
+        "furniture"
+      ],
+      "description": "wood #7e4e2a"
+    },
+    {
+      "id": "wood-walnut",
+      "file": "library.json",
+      "tags": [
+        "wood",
+        "furniture"
+      ],
+      "description": "wood #5b3b25"
+    },
+    {
+      "id": "wood-light-oak",
+      "file": "library.json",
+      "tags": [
+        "wood",
+        "furniture"
+      ],
+      "description": "wood #c79e70"
+    },
+    {
+      "id": "door-wood-veneer",
+      "file": "library.json",
+      "tags": [
+        "wood",
+        "door"
+      ],
+      "description": "wood #a06f43"
+    },
+    {
+      "id": "door-main-teak",
+      "file": "library.json",
+      "tags": [
+        "wood",
+        "door"
+      ],
+      "description": "wood #6e3f1e"
+    },
+    {
+      "id": "laminate-white-gloss",
+      "file": "library.json",
+      "tags": [
+        "cabinet"
+      ],
+      "description": "plain #f1efea"
+    },
+    {
+      "id": "laminate-grey-matte",
+      "file": "library.json",
+      "tags": [
+        "cabinet"
+      ],
+      "description": "plain #6d6a66"
+    },
+    {
+      "id": "laminate-sage",
+      "file": "library.json",
+      "tags": [
+        "cabinet"
+      ],
+      "description": "plain #8d9e88"
+    },
+    {
+      "id": "laminate-wood",
+      "file": "library.json",
+      "tags": [
+        "cabinet",
+        "wood"
+      ],
+      "description": "wood #a87b52"
+    },
+    {
+      "id": "fabric-grey",
+      "file": "library.json",
+      "tags": [
+        "fabric"
+      ],
+      "description": "fabric #8a8986"
+    },
+    {
+      "id": "fabric-charcoal",
+      "file": "library.json",
+      "tags": [
+        "fabric"
+      ],
+      "description": "fabric #4c4b49"
+    },
+    {
+      "id": "fabric-beige",
+      "file": "library.json",
+      "tags": [
+        "fabric"
+      ],
+      "description": "fabric #cbbca5"
+    },
+    {
+      "id": "fabric-cushion-white",
+      "file": "library.json",
+      "tags": [
+        "fabric"
+      ],
+      "description": "fabric #ebe6dd"
+    },
+    {
+      "id": "fabric-mustard",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "accent"
+      ],
+      "description": "fabric #c6922e"
+    },
+    {
+      "id": "fabric-teal",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "accent"
+      ],
+      "description": "fabric #2f6f6b"
+    },
+    {
+      "id": "bed-linen-white",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "bed"
+      ],
+      "description": "fabric #f0ece4"
+    },
+    {
+      "id": "bed-linen-sand",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "bed"
+      ],
+      "description": "fabric #d6c3a3"
+    },
+    {
+      "id": "rug-grey",
+      "file": "library.json",
+      "tags": [
+        "rug"
+      ],
+      "description": "fabric #9a9792"
+    },
+    {
+      "id": "rug-cream",
+      "file": "library.json",
+      "tags": [
+        "rug"
+      ],
+      "description": "fabric #dcd0bb"
+    },
+    {
+      "id": "metal-steel",
+      "file": "library.json",
+      "tags": [
+        "metal"
+      ],
+      "description": "brushed #c4c6c8"
+    },
+    {
+      "id": "metal-black",
+      "file": "library.json",
+      "tags": [
+        "metal"
+      ],
+      "description": "plain #232323"
+    },
+    {
+      "id": "metal-brass",
+      "file": "library.json",
+      "tags": [
+        "metal",
+        "puja"
+      ],
+      "description": "plain #c9a14a"
+    },
+    {
+      "id": "chrome",
+      "file": "library.json",
+      "tags": [
+        "metal",
+        "sanitary"
+      ],
+      "description": "plain #e6e6e6"
+    },
+    {
+      "id": "appliance-silver",
+      "file": "library.json",
+      "tags": [
+        "appliance"
+      ],
+      "description": "brushed #c8cacb"
+    },
+    {
+      "id": "appliance-white",
+      "file": "library.json",
+      "tags": [
+        "appliance"
+      ],
+      "description": "plain #efefed"
+    },
+    {
+      "id": "ceramic-white",
+      "file": "library.json",
+      "tags": [
+        "sanitary"
+      ],
+      "description": "plain #f7f7f5"
+    },
+    {
+      "id": "plastic-black",
+      "file": "library.json",
+      "tags": [
+        "appliance"
+      ],
+      "description": "plain #1b1b1b"
+    },
+    {
+      "id": "upvc-white",
+      "file": "library.json",
+      "tags": [
+        "window"
+      ],
+      "description": "plain #f2f2f0"
+    },
+    {
+      "id": "aluminium-dark",
+      "file": "library.json",
+      "tags": [
+        "window"
+      ],
+      "description": "plain #3a3b3d"
+    },
+    {
+      "id": "glass-clear",
+      "file": "library.json",
+      "tags": [
+        "glass"
+      ],
+      "description": "glass #dfeef3"
+    },
+    {
+      "id": "glass-frosted",
+      "file": "library.json",
+      "tags": [
+        "glass"
+      ],
+      "description": "glass #eef3f4"
+    },
+    {
+      "id": "mirror",
+      "file": "library.json",
+      "tags": [
+        "glass"
+      ],
+      "description": "mirror #e8eef0"
+    },
+    {
+      "id": "screen-black",
+      "file": "library.json",
+      "tags": [
+        "appliance"
+      ],
+      "description": "plain #0e0f10"
+    },
+    {
+      "id": "lamp-warm",
+      "file": "library.json",
+      "tags": [
+        "light"
+      ],
+      "description": "emissive #fff1d6"
+    },
+    {
+      "id": "flame",
+      "file": "library.json",
+      "tags": [
+        "light",
+        "puja"
+      ],
+      "description": "emissive #ffb347"
+    },
+    {
+      "id": "marigold",
+      "file": "library.json",
+      "tags": [
+        "puja",
+        "decor"
+      ],
+      "description": "plain #f29a1a"
+    },
+    {
+      "id": "kumkum-red",
+      "file": "library.json",
+      "tags": [
+        "puja",
+        "decor"
+      ],
+      "description": "plain #a3201c"
+    },
+    {
+      "id": "plant-green",
+      "file": "library.json",
+      "tags": [
+        "decor"
+      ],
+      "description": "plain #3f6b2a"
+    },
+    {
+      "id": "terracotta",
+      "file": "library.json",
+      "tags": [
+        "decor"
+      ],
+      "description": "plain #b0603c"
+    },
+    {
+      "id": "grass-lawn",
+      "file": "library.json",
+      "tags": [
+        "outdoor"
+      ],
+      "description": "grass #4d7a30"
+    },
+    {
+      "id": "pavers-grey",
+      "file": "library.json",
+      "tags": [
+        "outdoor",
+        "floor"
+      ],
+      "description": "pavers #8f8b85"
+    },
+    {
+      "id": "concrete-grey",
+      "file": "library.json",
+      "tags": [
+        "outdoor"
+      ],
+      "description": "concrete #9a968f"
+    },
+    {
+      "id": "curtain-linen",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "curtain"
+      ],
+      "description": "fabric #e6dccb"
+    },
+    {
+      "id": "curtain-sage",
+      "file": "library.json",
+      "tags": [
+        "fabric",
+        "curtain"
+      ],
+      "description": "fabric #9aa88f"
+    },
+    {
+      "id": "tile-bath-marble-grey",
+      "file": "library.json",
+      "tags": [
+        "wall",
+        "wet",
+        "tile",
+        "marble"
+      ],
+      "description": "2x2 ft grey-white marble-look wall tile (bathroom dado)"
+    }
+  ],
+  "palettes": [
+    {
+      "id": "warm-indian-modern",
+      "file": "warm-indian-modern.json",
+      "description": "Warm whites, teak and wood-finish tiles, black granite, sage accents. White + taupe exterior (matches the typical Hyderabad/Bengaluru apartment render)."
+    }
+  ]
+}

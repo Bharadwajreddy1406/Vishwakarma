@@ -1,0 +1,12 @@
+{
+  "name": "vishwakarma-ai",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Floor-plan PDF to walkable 3D house, built with Claude Code",
+  "workspaces": ["cli", "engine", "common"],
+  "scripts": {
+    "build:cli": "npm run build -w cli",
+    "dev": "npm run dev -w engine",
+    "typecheck": "npm run typecheck -w engine && npm run build -w cli"
+  }
+}

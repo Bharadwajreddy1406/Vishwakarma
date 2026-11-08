@@ -1,0 +1,361 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vk/plan.schema.json",
+  "title": "Vishwakarma verified floor plan",
+  "description": "Metric 2D floor plan. Coordinates in meters, plan space: +x right, +y up (north-up as drawn). Origin = min corner of the building bounding box.",
+  "type": "object",
+  "required": [
+    "version",
+    "units",
+    "walls",
+    "openings",
+    "rooms"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "units": {
+      "const": "m"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "pdf",
+            "image"
+          ],
+          "description": "vector PDF or raster image (jpg/png)"
+        },
+        "file": {
+          "type": "string",
+          "description": "path relative to the project dir"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "units_per_m": {
+          "type": "number",
+          "description": "source units (PDF points or image pixels) per real-world meter"
+        },
+        "origin": {
+          "$ref": "#/$defs/vec2",
+          "description": "source point (y-down page/image space) that maps to plan (0,0)"
+        },
+        "crop": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "[x0,y0,x1,y1] source region of this unit"
+        },
+        "ignore": {
+          "type": "array",
+          "description": "source regions [x0,y0,x1,y1] that the wall detector mis-reads (drawn furniture etc.), excluded from comparison",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        }
+      }
+    },
+    "site": {
+      "type": "object",
+      "properties": {
+        "north_deg": {
+          "type": "number",
+          "description": "direction of true north in plan space, degrees CCW from +y. 180 = north points down the drawing"
+        },
+        "floor": {
+          "type": "integer",
+          "description": "0 = ground floor"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "entrance": {
+          "type": "string",
+          "description": "opening id of the main door"
+        },
+        "outside": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "polygon": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/vec2"
+                }
+              }
+            }
+          },
+          "description": "context outside the unit: corridor, garden, open-to-sky"
+        },
+        "latitude": {
+          "type": "number",
+          "description": "degrees north, for the sun path (default 17.4)"
+        }
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "properties": {
+        "wall_height": {
+          "type": "number",
+          "default": 3
+        },
+        "door_height": {
+          "type": "number",
+          "default": 2.1
+        },
+        "window_sill": {
+          "type": "number",
+          "default": 0.9
+        },
+        "window_height": {
+          "type": "number",
+          "default": 1.2
+        }
+      }
+    },
+    "walls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "a",
+          "b",
+          "thickness"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "a": {
+            "$ref": "#/$defs/vec2",
+            "description": "centerline start"
+          },
+          "b": {
+            "$ref": "#/$defs/vec2",
+            "description": "centerline end"
+          },
+          "thickness": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "height": {
+            "type": "number"
+          },
+          "exterior": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    },
+    "openings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "wall",
+          "type",
+          "offset",
+          "width"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "wall": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "door",
+              "window",
+              "opening",
+              "sliding_door",
+              "ventilator"
+            ]
+          },
+          "offset": {
+            "type": "number",
+            "description": "distance from wall.a to the opening CENTER along the centerline (m)"
+          },
+          "width": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "height": {
+            "type": "number"
+          },
+          "sill": {
+            "type": "number",
+            "description": "bottom elevation (windows/ventilators)"
+          },
+          "hinge": {
+            "enum": [
+              "a",
+              "b"
+            ],
+            "description": "door hinge end, toward wall.a or wall.b"
+          },
+          "swing": {
+            "enum": [
+              "left",
+              "right"
+            ],
+            "description": "side of the wall the leaf swings into, looking from a to b"
+          },
+          "leaves": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 1
+          },
+          "connects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "room ids on either side"
+          }
+        }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "polygon"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "living",
+              "dining",
+              "kitchen",
+              "bedroom",
+              "master_bedroom",
+              "toilet",
+              "bathroom",
+              "puja",
+              "utility",
+              "balcony",
+              "sitout",
+              "foyer",
+              "passage",
+              "staircase",
+              "store",
+              "study",
+              "parking",
+              "wash",
+              "other"
+            ]
+          },
+          "polygon": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "$ref": "#/$defs/vec2"
+            },
+            "description": "clear interior polygon (inside wall faces), CCW"
+          },
+          "labeled": {
+            "type": "object",
+            "description": "dimensions as printed on the PDF, for verification (meters, w along x, l along y)",
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "w": {
+                "type": "number"
+              },
+              "l": {
+                "type": "number"
+              },
+              "gate": {
+                "type": "boolean",
+                "default": true,
+                "description": "false = nominal label on an irregular room; reported but not gated"
+              }
+            }
+          },
+          "floor_level": {
+            "type": "number",
+            "default": 0
+          }
+        }
+      }
+    },
+    "fixtures": {
+      "type": "array",
+      "description": "furniture/fixture symbols seen on the plan (hints for the scene stage)",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "room"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "room": {
+            "type": "string"
+          },
+          "center": {
+            "$ref": "#/$defs/vec2"
+          },
+          "size": {
+            "$ref": "#/$defs/vec2"
+          },
+          "rotation": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "vec2": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

@@ -1,0 +1,460 @@
+{
+ "version": 1,
+ "plan": "plan.json",
+ "palette": "warm-indian-modern",
+ "environment": {
+  "ceilings": true,
+  "false_ceiling": {
+   "height": 2.743,
+   "band": 0.45,
+   "recess": 0.12,
+   "led": "#ffd29a"
+  },
+  "time": 10,
+  "wet_dado_height": 1.372
+ },
+ "objects": [
+  {
+   "id": "wm",
+   "generator": "washing-machine",
+   "room": "wash",
+   "position": [
+    0.49,
+    9.84
+   ],
+   "rotation": 90
+  },
+  {
+   "id": "kit_run_a",
+   "generator": "kitchen-counter",
+   "room": "kitchen",
+   "position": [
+    0.487,
+    7.935
+   ],
+   "rotation": 90,
+   "params": {
+    "length": 2.6,
+    "sinkAt": 0.55,
+    "hobAt": 1.71,
+    "wallCabinets": false,
+    "chimney": true
+   }
+  },
+  {
+   "id": "kit_run_b",
+   "generator": "kitchen-counter",
+   "room": "kitchen",
+   "position": [
+    1.355,
+    8.94
+   ],
+   "rotation": 0,
+   "params": {
+    "length": 1.13,
+    "wallCabinets": false
+   }
+  },
+  {
+   "id": "pantry",
+   "generator": "tall-cabinet",
+   "room": "kitchen",
+   "position": [
+    3.01,
+    8.4
+   ],
+   "rotation": 270,
+   "params": {
+    "width": 1.6,
+    "height": 2.1,
+    "depth": 0.45,
+    "shelves": 4
+   }
+  },
+  {
+   "id": "fridge",
+   "generator": "fridge",
+   "room": "kitchen",
+   "position": [
+    2.885,
+    7.13
+   ],
+   "rotation": 270,
+   "params": {
+    "style": "double",
+    "hinge": "left"
+   }
+  },
+  {
+   "id": "wc1",
+   "generator": "wc",
+   "room": "toilet1",
+   "position": [
+    3.97,
+    10.07
+   ],
+   "rotation": 0
+  },
+  {
+   "id": "basin1",
+   "generator": "basin",
+   "room": "toilet1",
+   "position": [
+    3.524,
+    9.24
+   ],
+   "rotation": 90,
+   "params": {
+    "style": "wall",
+    "width": 0.45
+   }
+  },
+  {
+   "id": "towel1",
+   "generator": "decor",
+   "room": "toilet1",
+   "position": [
+    4.5,
+    8.4
+   ],
+   "rotation": 270,
+   "params": {
+    "kind": "towel-rail"
+   }
+  },
+  {
+   "id": "mbed_wardrobe",
+   "generator": "wardrobe",
+   "room": "mbed",
+   "position": [
+    6.9,
+    10.06
+   ],
+   "rotation": 0,
+   "params": {
+    "width": 1.9,
+    "depth": 0.55,
+    "height": 2.1,
+    "loft": true
+   }
+  },
+  {
+   "id": "mbed_bed",
+   "generator": "bed",
+   "room": "mbed",
+   "position": [
+    6.892,
+    7.624
+   ],
+   "rotation": 0,
+   "params": {
+    "size": "queen",
+    "storage": true
+   }
+  },
+  {
+   "id": "mbed_st1",
+   "generator": "side-table",
+   "room": "mbed",
+   "position": [
+    7.642,
+    9.564
+   ],
+   "rotation": 270
+  },
+  {
+   "id": "mbed_rug",
+   "generator": "decor",
+   "room": "mbed",
+   "position": [
+    6.3,
+    8.15
+   ],
+   "params": {
+    "kind": "rug",
+    "width": 2.4,
+    "depth": 1.7
+   },
+   "materials": {
+    "rug": "rug-cream"
+   },
+   "rotation": 90
+  },
+  {
+   "id": "mbed_fan",
+   "generator": "decor",
+   "room": "mbed",
+   "position": [
+    6.2,
+    8.4
+   ],
+   "params": {
+    "kind": "ceiling-fan"
+   }
+  },
+  {
+   "id": "mandir",
+   "generator": "mandir",
+   "room": "puja",
+   "position": [
+    0.42,
+    5.83
+   ],
+   "rotation": 90,
+   "params": {
+    "width": 0.88,
+    "depth": 0.45,
+    "height": 1.7,
+    "mount": "floor",
+    "idols": 3
+   }
+  },
+  {
+   "id": "dining_table",
+   "generator": "dining-table",
+   "room": "dining",
+   "position": [
+    6.21,
+    5.03
+   ],
+   "rotation": 0,
+   "params": {
+    "seats": 3,
+    "sides": 2,
+    "chairStyle": "upholstered"
+   }
+  },
+  {
+   "id": "crockery",
+   "generator": "sideboard",
+   "room": "dining",
+   "position": [
+    6.37,
+    6.25
+   ],
+   "rotation": 0,
+   "params": {
+    "width": 2.05,
+    "depth": 0.4,
+    "height": 0.85,
+    "drawers": 1
+   }
+  },
+  {
+   "id": "dining_basin",
+   "generator": "basin",
+   "room": "dining",
+   "position": [
+    7.64,
+    6.24
+   ],
+   "rotation": 0,
+   "params": {
+    "style": "vanity",
+    "width": 0.42
+   }
+  },
+  {
+   "id": "dining_fan",
+   "generator": "decor",
+   "room": "dining",
+   "position": [
+    5.6,
+    5
+   ],
+   "params": {
+    "kind": "ceiling-fan"
+   }
+  },
+  {
+   "id": "dining_plant",
+   "generator": "decor",
+   "room": "dining",
+   "position": [
+    7.6,
+    3.75
+   ],
+   "params": {
+    "kind": "plant",
+    "height": 1.2
+   }
+  },
+  {
+   "id": "tv_unit",
+   "generator": "tv-unit",
+   "room": "living",
+   "position": [
+    3.007,
+    1.817
+   ],
+   "rotation": 270,
+   "params": {
+    "width": 2.5,
+    "depth": 0.4,
+    "tvInches": 55
+   }
+  },
+  {
+   "id": "sofa_west",
+   "generator": "sofa",
+   "room": "living",
+   "position": [
+    0.637,
+    2.291
+   ],
+   "rotation": 90,
+   "params": {
+    "seats": 3
+   }
+  },
+  {
+   "id": "coffee_table",
+   "generator": "coffee-table",
+   "room": "living",
+   "position": [
+    1.715,
+    2.2
+   ],
+   "rotation": 90,
+   "params": {
+    "width": 1,
+    "depth": 0.48
+   }
+  },
+  {
+   "id": "living_rug",
+   "generator": "decor",
+   "room": "living",
+   "position": [
+    1.75,
+    2.3
+   ],
+   "rotation": 90,
+   "params": {
+    "kind": "rug",
+    "width": 2.3,
+    "depth": 1.5
+   }
+  },
+  {
+   "id": "armchair",
+   "generator": "armchair",
+   "room": "living",
+   "position": [
+    1.95,
+    0.52
+   ],
+   "rotation": 180,
+   "materials": {
+    "fabric": "fabric-teal"
+   }
+  },
+  {
+   "id": "living_st",
+   "generator": "side-table",
+   "room": "living",
+   "position": [
+    2.85,
+    0.4
+   ],
+   "rotation": 180,
+   "params": {
+    "drawer": false
+   }
+  },
+  {
+   "id": "living_fan",
+   "generator": "decor",
+   "room": "living",
+   "position": [
+    1.7,
+    2.6
+   ],
+   "params": {
+    "kind": "ceiling-fan"
+   }
+  },
+  {
+   "id": "wc2",
+   "generator": "wc",
+   "room": "toilet2",
+   "position": [
+    3.95,
+    1.16
+   ],
+   "rotation": 180
+  },
+  {
+   "id": "basin2",
+   "generator": "basin",
+   "room": "dining",
+   "position": [
+    3.838,
+    7.562
+   ],
+   "rotation": 0,
+   "params": {
+    "style": "wall",
+    "width": 0.45
+   }
+  },
+  {
+   "id": "cbed_wardrobe",
+   "generator": "wardrobe",
+   "room": "cbed",
+   "position": [
+    6.75,
+    3.157
+   ],
+   "rotation": 0,
+   "params": {
+    "width": 2.2,
+    "depth": 0.55,
+    "height": 2.1,
+    "loft": true
+   }
+  },
+  {
+   "id": "cbed_bed",
+   "generator": "bed",
+   "room": "cbed",
+   "position": [
+    7.103,
+    1.121
+   ],
+   "rotation": 180,
+   "params": {
+    "size": "queen",
+    "headboard": "wood"
+   },
+   "materials": {
+    "duvet": "bed-linen-white"
+   }
+  },
+  {
+   "id": "cbed_st",
+   "generator": "side-table",
+   "room": "cbed",
+   "position": [
+    7.65,
+    2.45
+   ],
+   "rotation": 270
+  },
+  {
+   "id": "cbed_fan",
+   "generator": "decor",
+   "room": "cbed",
+   "position": [
+    6.2,
+    1.8
+   ],
+   "params": {
+    "kind": "ceiling-fan"
+   }
+  }
+ ],
+ "plan_edits": {
+  "walls": {}
+ }
+}

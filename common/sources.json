@@ -1,0 +1,311 @@
+{
+  "_doc": "CC0 files downloaded by `vk fetch-assets`. Each entry: {dest (relative to common/), url, license, source}. Referenced from materials/library.json `maps` and scene.environment.hdri.",
+  "files": [
+    {
+      "dest": "textures/plastered_wall_02/plastered_wall_02_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plastered_wall_02/plastered_wall_02_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/plastered_wall_02/plastered_wall_02_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plastered_wall_02/plastered_wall_02_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/white_stucco/white_stucco_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/white_stucco/white_stucco_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/white_stucco/white_stucco_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_stucco/white_stucco_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/marble_01/marble_01_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_diff_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/marble_01/marble_01_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_nor_gl_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/marble_01/marble_01_rough_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_rough_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/laminate_floor_02/laminate_floor_02_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/laminate_floor_02/laminate_floor_02_diff_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/laminate_floor_02/laminate_floor_02_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/laminate_floor_02/laminate_floor_02_nor_gl_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/laminate_floor_02/laminate_floor_02_rough_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/laminate_floor_02/laminate_floor_02_rough_2k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/anti_skid_tiles/anti_skid_tiles_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/anti_skid_tiles/anti_skid_tiles_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/anti_skid_tiles/anti_skid_tiles_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/anti_skid_tiles/anti_skid_tiles_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/anti_skid_tiles/anti_skid_tiles_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/anti_skid_tiles/anti_skid_tiles_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interior_tiles/interior_tiles_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interior_tiles/interior_tiles_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interior_tiles/interior_tiles_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interior_tiles/interior_tiles_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interior_tiles/interior_tiles_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interior_tiles/interior_tiles_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/kitchen_wood/kitchen_wood_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/kitchen_wood/kitchen_wood_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/kitchen_wood/kitchen_wood_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/kitchen_wood/kitchen_wood_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/kitchen_wood/kitchen_wood_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/kitchen_wood/kitchen_wood_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/american_walnut_veneer/american_walnut_veneer_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/american_walnut_veneer/american_walnut_veneer_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/american_walnut_veneer/american_walnut_veneer_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/american_walnut_veneer/american_walnut_veneer_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/american_walnut_veneer/american_walnut_veneer_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/american_walnut_veneer/american_walnut_veneer_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/oak_veneer_01/oak_veneer_01_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/black_walnut_veneer_01/black_walnut_veneer_01_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/black_walnut_veneer_01/black_walnut_veneer_01_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/black_walnut_veneer_01/black_walnut_veneer_01_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/black_walnut_veneer_01/black_walnut_veneer_01_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/black_walnut_veneer_01/black_walnut_veneer_01_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/black_walnut_veneer_01/black_walnut_veneer_01_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/poly_wool_herringbone/poly_wool_herringbone_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/wool_boucle/wool_boucle_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wool_boucle/wool_boucle_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/wool_boucle/wool_boucle_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wool_boucle/wool_boucle_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/rough_linen/rough_linen_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/rough_linen/rough_linen_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/aerial_grass_rock/aerial_grass_rock_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_grass_rock/aerial_grass_rock_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/aerial_grass_rock/aerial_grass_rock_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_grass_rock/aerial_grass_rock_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/aerial_grass_rock/aerial_grass_rock_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/aerial_grass_rock/aerial_grass_rock_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interlocking_concrete_pavers/interlocking_concrete_pavers_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interlocking_concrete_pavers/interlocking_concrete_pavers_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/interlocking_concrete_pavers/interlocking_concrete_pavers_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/concrete_floor_02/concrete_floor_02_diff_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_diff_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/concrete_floor_02/concrete_floor_02_nor_gl_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_nor_gl_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "textures/concrete_floor_02/concrete_floor_02_rough_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_rough_1k.jpg",
+      "license": "CC0",
+      "source": "https://polyhaven.com"
+    },
+    {
+      "dest": "hdri/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "license": "CC0",
+      "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky"
+    },
+    {
+      "dest": "models/soldier.glb",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r169/examples/models/gltf/Soldier.glb",
+      "license": "three.js example asset (Mixamo) — personal use, do not redistribute",
+      "source": "https://threejs.org/examples/#webgl_animation_walk"
+    },
+    {
+      "dest": "models/xbot.glb",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r169/examples/models/gltf/Xbot.glb",
+      "license": "three.js example asset (Mixamo) — personal use, do not redistribute",
+      "source": "https://threejs.org/examples/#webgl_animation_skinning_additive_blending"
+    }
+  ]
+}

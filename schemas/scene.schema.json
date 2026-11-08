@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vk/scene.schema.json",
+  "title": "Vishwakarma 3D scene",
+  "description": "Everything the engine needs on top of plan.json. Positions are plan-space meters [x, y]; elevation is height above the room floor. Rotation in degrees, CCW seen from above (0 = object front faces -y / 'south' on the plan).",
+  "type": "object",
+  "required": [
+    "version",
+    "plan",
+    "objects"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "plan": {
+      "type": "string",
+      "default": "plan.json"
+    },
+    "palette": {
+      "type": "string",
+      "description": "id in common/palettes"
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "hdri": {
+          "type": "string"
+        },
+        "sun": {
+          "type": "object",
+          "properties": {
+            "azimuth": {
+              "type": "number"
+            },
+            "elevation": {
+              "type": "number"
+            },
+            "intensity": {
+              "type": "number"
+            }
+          }
+        },
+        "ceilings": {
+          "type": "boolean",
+          "default": true
+        },
+        "false_ceiling": {
+          "type": "object",
+          "description": "POP / gypsum false ceiling hung below the slab (plan.defaults.wall_height). Omit for a plain slab ceiling.",
+          "required": [
+            "height"
+          ],
+          "properties": {
+            "height": {
+              "type": "number",
+              "description": "underside of the false ceiling above the floor (m); 9'0\" = 2.743"
+            },
+            "rooms": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "room ids to cover (default: every room except exclude_types)"
+            },
+            "exclude_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [
+                "other",
+                "balcony",
+                "sitout",
+                "parking"
+              ]
+            },
+            "cove_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "default": [
+                "living",
+                "dining",
+                "bedroom",
+                "master_bedroom"
+              ],
+              "description": "room types that get a peripheral band + raised centre + LED cove; others are flat"
+            },
+            "band": {
+              "type": "number",
+              "default": 0.45,
+              "description": "width of the peripheral band (m)"
+            },
+            "recess": {
+              "type": "number",
+              "default": 0.12,
+              "description": "how much higher the centre is than the band (m)"
+            },
+            "led": {
+              "type": "string",
+              "default": "#ffd29a",
+              "description": "cove LED colour; empty string = no LED"
+            }
+          }
+        },
+        "ground": {
+          "type": "string",
+          "description": "material id for outdoor ground"
+        },
+        "time": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 24,
+          "description": "local solar time in hours (default 10)"
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^d{2}-d{2}$",
+          "description": "MM-DD for the sun path (default: today)"
+        },
+        "wet_dado_height": {
+          "type": "number",
+          "description": "bathroom wall tile height in m (default 1.372 = 4'6\")"
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "description": "global surface material ids",
+      "properties": {
+        "wall_interior": {
+          "type": "string"
+        },
+        "wall_exterior": {
+          "type": "string"
+        },
+        "floor": {
+          "type": "string"
+        },
+        "ceiling": {
+          "type": "string"
+        },
+        "door": {
+          "type": "string"
+        },
+        "window_frame": {
+          "type": "string"
+        }
+      }
+    },
+    "rooms": {
+      "type": "object",
+      "description": "per-room overrides keyed by plan room id",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "floor": {
+            "type": "string"
+          },
+          "wall": {
+            "type": "string"
+          },
+          "ceiling": {
+            "type": "string"
+          },
+          "light": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "intensity": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "openings": {
+      "type": "object",
+      "description": "per-opening generator overrides keyed by plan opening id (defaults: door / window generators)",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "generator": {
+            "type": "string"
+          },
+          "params": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "generator",
+          "position"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "generator": {
+            "type": "string",
+            "description": "id from common/registry.json, or 'local:<id>' for projects/<name>/assets"
+          },
+          "params": {
+            "type": "object"
+          },
+          "room": {
+            "type": "string"
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "elevation": {
+            "type": "number",
+            "default": 0
+          },
+          "rotation": {
+            "type": "number",
+            "default": 0
+          },
+          "materials": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "slot -> material id"
+          }
+        }
+      }
+    },
+    "spawn": {
+      "type": "object",
+      "properties": {
+        "position": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "heading": {
+          "type": "number",
+          "description": "degrees, 0 = facing +y on the plan"
+        }
+      }
+    },
+    "viewpoints": {
+      "type": "array",
+      "description": "extra hand-placed viewpoints; furniture-based ones (sofa, bed, dining, mandir, kitchen, commode) are generated automatically",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "position"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "room": {
+            "type": "string"
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "eye": {
+            "type": "number",
+            "description": "eye height (m), default 1.68"
+          },
+          "heading": {
+            "type": "number"
+          },
+          "pitch": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "plan_edits": {
+      "type": "object",
+      "description": "design changes made in the in-game editor on top of the verified plan.json (which stays as drawn)",
+      "properties": {
+        "walls": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "a",
+              "b"
+            ],
+            "properties": {
+              "a": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "b": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

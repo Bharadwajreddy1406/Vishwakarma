@@ -1,0 +1,10 @@
+{
+  "name": "@vk/common",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./generators": "./generators/index.ts",
+    "./*": "./*"
+  }
+}

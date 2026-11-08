@@ -1,0 +1,29 @@
+{
+  "name": "flat-105",
+  "created": "2026-11-08T04:58:35.928Z",
+  "updated": "2026-11-08T07:36:00.698Z",
+  "stages": {
+    "extract": {
+      "state": "done",
+      "at": "2026-11-08T04:58:37.173Z",
+      "note": "input\\floor-plan.jpg"
+    },
+    "interpret": {
+      "state": "done",
+      "at": "2026-11-08T05:56:00.829Z"
+    },
+    "verify": {
+      "state": "done",
+      "at": "2026-11-08T07:36:00.697Z"
+    },
+    "furnish": {
+      "state": "done",
+      "at": "2026-11-08T05:35:15.111Z",
+      "note": "34 objects, 20 shared generators"
+    },
+    "play": {
+      "state": "done",
+      "at": "2026-11-08T05:36:12.228Z"
+    }
+  }
+}

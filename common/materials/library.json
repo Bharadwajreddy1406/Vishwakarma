@@ -1,0 +1,942 @@
+{
+ "materials": [
+  {
+   "id": "paint-warm-white",
+   "kind": "plaster",
+   "color": "#eee8dd",
+   "scale": 2,
+   "roughness": 0.92,
+   "tags": [
+    "wall",
+    "paint"
+   ],
+   "maps": {
+    "normal": "textures/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+    "roughness": "textures/plastered_wall_02/plastered_wall_02_rough_1k.jpg"
+   },
+   "mapScale": 2.5,
+   "normalScale": 0.15,
+   "source": "polyhaven:plastered_wall_02"
+  },
+  {
+   "id": "paint-exterior-white",
+   "kind": "plaster",
+   "color": "#f1efea",
+   "scale": 2,
+   "roughness": 0.9,
+   "tags": [
+    "wall",
+    "exterior"
+   ],
+   "maps": {
+    "normal": "textures/white_stucco/white_stucco_nor_gl_1k.jpg",
+    "roughness": "textures/white_stucco/white_stucco_rough_1k.jpg"
+   },
+   "mapScale": 2,
+   "normalScale": 0.5,
+   "source": "polyhaven:white_stucco"
+  },
+  {
+   "id": "paint-exterior-taupe",
+   "kind": "plaster",
+   "color": "#9c8774",
+   "scale": 2,
+   "roughness": 0.9,
+   "tags": [
+    "wall",
+    "exterior",
+    "accent"
+   ],
+   "maps": {
+    "normal": "textures/white_stucco/white_stucco_nor_gl_1k.jpg",
+    "roughness": "textures/white_stucco/white_stucco_rough_1k.jpg"
+   },
+   "mapScale": 2,
+   "normalScale": 0.5,
+   "source": "polyhaven:white_stucco"
+  },
+  {
+   "id": "paint-sage",
+   "kind": "plaster",
+   "color": "#a9b59f",
+   "scale": 2,
+   "roughness": 0.9,
+   "tags": [
+    "wall",
+    "accent"
+   ],
+   "maps": {
+    "normal": "textures/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+    "roughness": "textures/plastered_wall_02/plastered_wall_02_rough_1k.jpg"
+   },
+   "mapScale": 2.5,
+   "normalScale": 0.15,
+   "source": "polyhaven:plastered_wall_02"
+  },
+  {
+   "id": "paint-terracotta",
+   "kind": "plaster",
+   "color": "#c7826a",
+   "scale": 2,
+   "roughness": 0.9,
+   "tags": [
+    "wall",
+    "accent"
+   ],
+   "maps": {
+    "normal": "textures/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+    "roughness": "textures/plastered_wall_02/plastered_wall_02_rough_1k.jpg"
+   },
+   "mapScale": 2.5,
+   "normalScale": 0.15,
+   "source": "polyhaven:plastered_wall_02"
+  },
+  {
+   "id": "ceiling-white",
+   "kind": "plaster",
+   "color": "#f6f4ef",
+   "scale": 2,
+   "roughness": 0.95,
+   "tags": [
+    "ceiling"
+   ],
+   "maps": {
+    "normal": "textures/plastered_wall_02/plastered_wall_02_nor_gl_1k.jpg",
+    "roughness": "textures/plastered_wall_02/plastered_wall_02_rough_1k.jpg"
+   },
+   "mapScale": 3,
+   "normalScale": 0.08,
+   "source": "polyhaven:plastered_wall_02"
+  },
+  {
+   "id": "vitrified-ivory",
+   "kind": "tiles",
+   "color": "#e8e0d2",
+   "color2": "#dcd2c1",
+   "grout": "#cfc8bb",
+   "tiles": 1,
+   "scale": 0.6,
+   "roughness": 0.22,
+   "bump": 0.4,
+   "tags": [
+    "floor",
+    "tile"
+   ],
+   "description": "2'x2' polished vitrified tile",
+   "maps": {
+    "color": "textures/marble_01/marble_01_diff_2k.jpg",
+    "normal": "textures/marble_01/marble_01_nor_gl_2k.jpg",
+    "roughness": "textures/marble_01/marble_01_rough_2k.jpg"
+   },
+   "mapScale": 0.6,
+   "normalScale": 0.25,
+   "source": "polyhaven:marble_01",
+   "photoGrout": true,
+   "tint": "#f6ead6"
+  },
+  {
+   "id": "vitrified-wood-finish",
+   "kind": "wood",
+   "color": "#b4875a",
+   "color2": "#94683f",
+   "tiles": 1,
+   "scale": 0.2,
+   "roughness": 0.45,
+   "bump": 0.5,
+   "tags": [
+    "floor",
+    "tile",
+    "wood-look"
+   ],
+   "description": "wood-finish plank tiles",
+   "maps": {
+    "color": "textures/laminate_floor_02/laminate_floor_02_diff_2k.jpg",
+    "normal": "textures/laminate_floor_02/laminate_floor_02_nor_gl_2k.jpg",
+    "roughness": "textures/laminate_floor_02/laminate_floor_02_rough_2k.jpg"
+   },
+   "mapScale": 2,
+   "normalScale": 0.6,
+   "source": "polyhaven:laminate_floor_02"
+  },
+  {
+   "id": "laminate-oak",
+   "kind": "wood",
+   "color": "#c39a6b",
+   "color2": "#a67b4e",
+   "tiles": 6,
+   "scale": 1.2,
+   "roughness": 0.5,
+   "bump": 0.5,
+   "tags": [
+    "floor",
+    "wood"
+   ],
+   "maps": {
+    "color": "textures/laminate_floor_02/laminate_floor_02_diff_2k.jpg",
+    "normal": "textures/laminate_floor_02/laminate_floor_02_nor_gl_2k.jpg",
+    "roughness": "textures/laminate_floor_02/laminate_floor_02_rough_2k.jpg"
+   },
+   "mapScale": 2,
+   "normalScale": 0.6,
+   "source": "polyhaven:laminate_floor_02"
+  },
+  {
+   "id": "tile-antiskid-beige",
+   "kind": "tiles",
+   "color": "#c9bba3",
+   "color2": "#b9aa90",
+   "grout": "#a99c86",
+   "tiles": 1,
+   "scale": 0.3,
+   "roughness": 0.85,
+   "bump": 0.8,
+   "tags": [
+    "floor",
+    "wet"
+   ],
+   "maps": {
+    "color": "textures/anti_skid_tiles/anti_skid_tiles_diff_1k.jpg",
+    "normal": "textures/anti_skid_tiles/anti_skid_tiles_nor_gl_1k.jpg",
+    "roughness": "textures/anti_skid_tiles/anti_skid_tiles_rough_1k.jpg"
+   },
+   "mapScale": 1,
+   "normalScale": 1,
+   "source": "polyhaven:anti_skid_tiles"
+  },
+  {
+   "id": "tile-wall-white-gloss",
+   "kind": "tiles",
+   "color": "#f2f0eb",
+   "color2": "#e7e4dc",
+   "grout": "#d8d4cb",
+   "tiles": 2,
+   "scale": 0.6,
+   "roughness": 0.12,
+   "bump": 0.3,
+   "tags": [
+    "wall",
+    "wet"
+   ],
+   "maps": {
+    "color": "textures/interior_tiles/interior_tiles_diff_1k.jpg",
+    "normal": "textures/interior_tiles/interior_tiles_nor_gl_1k.jpg",
+    "roughness": "textures/interior_tiles/interior_tiles_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.6,
+   "source": "polyhaven:interior_tiles"
+  },
+  {
+   "id": "tile-kitchen-dado",
+   "kind": "tiles",
+   "color": "#d8d0c0",
+   "color2": "#cdc3b0",
+   "grout": "#bdb3a1",
+   "tiles": 4,
+   "scale": 0.6,
+   "roughness": 0.15,
+   "tags": [
+    "wall",
+    "kitchen"
+   ],
+   "maps": {
+    "color": "textures/interior_tiles/interior_tiles_diff_1k.jpg",
+    "normal": "textures/interior_tiles/interior_tiles_nor_gl_1k.jpg",
+    "roughness": "textures/interior_tiles/interior_tiles_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.6,
+   "source": "polyhaven:interior_tiles"
+  },
+  {
+   "id": "marble-white",
+   "kind": "marble",
+   "color": "#f2efe9",
+   "color2": "#a39c90",
+   "scale": 1.5,
+   "roughness": 0.15,
+   "tags": [
+    "floor",
+    "stone",
+    "puja"
+   ],
+   "maps": {
+    "color": "textures/marble_01/marble_01_diff_2k.jpg",
+    "normal": "textures/marble_01/marble_01_nor_gl_2k.jpg",
+    "roughness": "textures/marble_01/marble_01_rough_2k.jpg"
+   },
+   "mapScale": 1.5,
+   "normalScale": 0.3,
+   "source": "polyhaven:marble_01",
+   "tint": "#fbf6ee"
+  },
+  {
+   "id": "granite-black",
+   "kind": "granite",
+   "color": "#1d1d1d",
+   "color2": "#353331",
+   "scale": 0.8,
+   "roughness": 0.18,
+   "tags": [
+    "counter",
+    "stone"
+   ]
+  },
+  {
+   "id": "granite-tan-brown",
+   "kind": "granite",
+   "color": "#6b4a32",
+   "color2": "#8c6748",
+   "scale": 0.8,
+   "roughness": 0.2,
+   "tags": [
+    "counter",
+    "stone"
+   ]
+  },
+  {
+   "id": "wood-teak",
+   "kind": "wood",
+   "color": "#7e4e2a",
+   "color2": "#5c341a",
+   "tiles": 1,
+   "scale": 0.9,
+   "roughness": 0.5,
+   "tags": [
+    "wood",
+    "furniture"
+   ],
+   "maps": {
+    "color": "textures/kitchen_wood/kitchen_wood_diff_1k.jpg",
+    "normal": "textures/kitchen_wood/kitchen_wood_nor_gl_1k.jpg",
+    "roughness": "textures/kitchen_wood/kitchen_wood_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.6,
+   "source": "polyhaven:kitchen_wood"
+  },
+  {
+   "id": "wood-walnut",
+   "kind": "wood",
+   "color": "#5b3b25",
+   "color2": "#3d2717",
+   "tiles": 1,
+   "scale": 0.9,
+   "roughness": 0.5,
+   "tags": [
+    "wood",
+    "furniture"
+   ],
+   "maps": {
+    "color": "textures/american_walnut_veneer/american_walnut_veneer_diff_1k.jpg",
+    "normal": "textures/american_walnut_veneer/american_walnut_veneer_nor_gl_1k.jpg",
+    "roughness": "textures/american_walnut_veneer/american_walnut_veneer_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.5,
+   "source": "polyhaven:american_walnut_veneer"
+  },
+  {
+   "id": "wood-light-oak",
+   "kind": "wood",
+   "color": "#c79e70",
+   "color2": "#a87e52",
+   "tiles": 1,
+   "scale": 0.9,
+   "roughness": 0.55,
+   "tags": [
+    "wood",
+    "furniture"
+   ],
+   "maps": {
+    "color": "textures/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+    "normal": "textures/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+    "roughness": "textures/oak_veneer_01/oak_veneer_01_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.5,
+   "source": "polyhaven:oak_veneer_01"
+  },
+  {
+   "id": "door-wood-veneer",
+   "kind": "wood",
+   "color": "#a06f43",
+   "color2": "#835631",
+   "tiles": 1,
+   "scale": 2.2,
+   "roughness": 0.5,
+   "tags": [
+    "wood",
+    "door"
+   ],
+   "maps": {
+    "color": "textures/american_walnut_veneer/american_walnut_veneer_diff_1k.jpg",
+    "normal": "textures/american_walnut_veneer/american_walnut_veneer_nor_gl_1k.jpg",
+    "roughness": "textures/american_walnut_veneer/american_walnut_veneer_rough_1k.jpg"
+   },
+   "mapScale": 1.6,
+   "normalScale": 0.5,
+   "source": "polyhaven:american_walnut_veneer"
+  },
+  {
+   "id": "door-main-teak",
+   "kind": "wood",
+   "color": "#6e3f1e",
+   "color2": "#4f2a12",
+   "tiles": 1,
+   "scale": 2.2,
+   "roughness": 0.4,
+   "tags": [
+    "wood",
+    "door"
+   ],
+   "maps": {
+    "color": "textures/black_walnut_veneer_01/black_walnut_veneer_01_diff_1k.jpg",
+    "normal": "textures/black_walnut_veneer_01/black_walnut_veneer_01_nor_gl_1k.jpg",
+    "roughness": "textures/black_walnut_veneer_01/black_walnut_veneer_01_rough_1k.jpg"
+   },
+   "mapScale": 1.6,
+   "normalScale": 0.5,
+   "source": "polyhaven:black_walnut_veneer_01"
+  },
+  {
+   "id": "laminate-white-gloss",
+   "kind": "plain",
+   "color": "#f1efea",
+   "roughness": 0.25,
+   "tags": [
+    "cabinet"
+   ]
+  },
+  {
+   "id": "laminate-grey-matte",
+   "kind": "plain",
+   "color": "#6d6a66",
+   "roughness": 0.65,
+   "tags": [
+    "cabinet"
+   ]
+  },
+  {
+   "id": "laminate-sage",
+   "kind": "plain",
+   "color": "#8d9e88",
+   "roughness": 0.5,
+   "tags": [
+    "cabinet"
+   ]
+  },
+  {
+   "id": "laminate-wood",
+   "kind": "wood",
+   "color": "#a87b52",
+   "color2": "#8e6440",
+   "tiles": 1,
+   "scale": 1.2,
+   "roughness": 0.45,
+   "tags": [
+    "cabinet",
+    "wood"
+   ],
+   "maps": {
+    "color": "textures/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+    "normal": "textures/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+    "roughness": "textures/oak_veneer_01/oak_veneer_01_rough_1k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.4,
+   "source": "polyhaven:oak_veneer_01"
+  },
+  {
+   "id": "fabric-grey",
+   "kind": "fabric",
+   "color": "#8a8986",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric"
+   ],
+   "maps": {
+    "normal": "textures/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+    "roughness": "textures/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg"
+   },
+   "mapScale": 0.5,
+   "normalScale": 0.8,
+   "source": "polyhaven:poly_wool_herringbone"
+  },
+  {
+   "id": "fabric-charcoal",
+   "kind": "fabric",
+   "color": "#4c4b49",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric"
+   ],
+   "maps": {
+    "normal": "textures/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+    "roughness": "textures/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg"
+   },
+   "mapScale": 0.5,
+   "normalScale": 0.8,
+   "source": "polyhaven:poly_wool_herringbone"
+  },
+  {
+   "id": "fabric-beige",
+   "kind": "fabric",
+   "color": "#cbbca5",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric"
+   ],
+   "maps": {
+    "normal": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+    "roughness": "textures/wool_boucle/wool_boucle_rough_1k.jpg"
+   },
+   "mapScale": 0.4,
+   "normalScale": 0.8,
+   "source": "polyhaven:wool_boucle"
+  },
+  {
+   "id": "fabric-cushion-white",
+   "kind": "fabric",
+   "color": "#ebe6dd",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric"
+   ],
+   "maps": {
+    "normal": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+    "roughness": "textures/wool_boucle/wool_boucle_rough_1k.jpg"
+   },
+   "mapScale": 0.4,
+   "normalScale": 0.8,
+   "source": "polyhaven:wool_boucle"
+  },
+  {
+   "id": "fabric-mustard",
+   "kind": "fabric",
+   "color": "#c6922e",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "accent"
+   ],
+   "maps": {
+    "normal": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+    "roughness": "textures/wool_boucle/wool_boucle_rough_1k.jpg"
+   },
+   "mapScale": 0.4,
+   "normalScale": 0.8,
+   "source": "polyhaven:wool_boucle"
+  },
+  {
+   "id": "fabric-teal",
+   "kind": "fabric",
+   "color": "#2f6f6b",
+   "scale": 0.25,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "accent"
+   ],
+   "maps": {
+    "normal": "textures/poly_wool_herringbone/poly_wool_herringbone_nor_gl_1k.jpg",
+    "roughness": "textures/poly_wool_herringbone/poly_wool_herringbone_rough_1k.jpg"
+   },
+   "mapScale": 0.5,
+   "normalScale": 0.8,
+   "source": "polyhaven:poly_wool_herringbone"
+  },
+  {
+   "id": "bed-linen-white",
+   "kind": "fabric",
+   "color": "#f0ece4",
+   "scale": 0.3,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "bed"
+   ],
+   "maps": {
+    "normal": "textures/rough_linen/rough_linen_nor_gl_1k.jpg",
+    "roughness": "textures/rough_linen/rough_linen_rough_1k.jpg"
+   },
+   "mapScale": 0.6,
+   "normalScale": 0.6,
+   "source": "polyhaven:rough_linen"
+  },
+  {
+   "id": "bed-linen-sand",
+   "kind": "fabric",
+   "color": "#d6c3a3",
+   "scale": 0.3,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "bed"
+   ],
+   "maps": {
+    "normal": "textures/rough_linen/rough_linen_nor_gl_1k.jpg",
+    "roughness": "textures/rough_linen/rough_linen_rough_1k.jpg"
+   },
+   "mapScale": 0.6,
+   "normalScale": 0.6,
+   "source": "polyhaven:rough_linen"
+  },
+  {
+   "id": "rug-grey",
+   "kind": "fabric",
+   "color": "#9a9792",
+   "scale": 0.4,
+   "roughness": 1,
+   "tags": [
+    "rug"
+   ],
+   "maps": {
+    "normal": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+    "roughness": "textures/wool_boucle/wool_boucle_rough_1k.jpg"
+   },
+   "mapScale": 0.5,
+   "normalScale": 1,
+   "source": "polyhaven:wool_boucle"
+  },
+  {
+   "id": "rug-cream",
+   "kind": "fabric",
+   "color": "#dcd0bb",
+   "scale": 0.4,
+   "roughness": 1,
+   "tags": [
+    "rug"
+   ],
+   "maps": {
+    "normal": "textures/wool_boucle/wool_boucle_nor_gl_1k.jpg",
+    "roughness": "textures/wool_boucle/wool_boucle_rough_1k.jpg"
+   },
+   "mapScale": 0.5,
+   "normalScale": 1,
+   "source": "polyhaven:wool_boucle"
+  },
+  {
+   "id": "metal-steel",
+   "kind": "brushed",
+   "color": "#c4c6c8",
+   "scale": 0.5,
+   "roughness": 0.35,
+   "metalness": 0.9,
+   "tags": [
+    "metal"
+   ]
+  },
+  {
+   "id": "metal-black",
+   "kind": "plain",
+   "color": "#232323",
+   "roughness": 0.45,
+   "metalness": 0.6,
+   "tags": [
+    "metal"
+   ]
+  },
+  {
+   "id": "metal-brass",
+   "kind": "plain",
+   "color": "#c9a14a",
+   "roughness": 0.3,
+   "metalness": 1,
+   "tags": [
+    "metal",
+    "puja"
+   ]
+  },
+  {
+   "id": "chrome",
+   "kind": "plain",
+   "color": "#e6e6e6",
+   "roughness": 0.08,
+   "metalness": 1,
+   "tags": [
+    "metal",
+    "sanitary"
+   ]
+  },
+  {
+   "id": "appliance-silver",
+   "kind": "brushed",
+   "color": "#c8cacb",
+   "scale": 0.6,
+   "roughness": 0.3,
+   "metalness": 0.7,
+   "tags": [
+    "appliance"
+   ]
+  },
+  {
+   "id": "appliance-white",
+   "kind": "plain",
+   "color": "#efefed",
+   "roughness": 0.3,
+   "tags": [
+    "appliance"
+   ]
+  },
+  {
+   "id": "ceramic-white",
+   "kind": "plain",
+   "color": "#f7f7f5",
+   "roughness": 0.08,
+   "tags": [
+    "sanitary"
+   ]
+  },
+  {
+   "id": "plastic-black",
+   "kind": "plain",
+   "color": "#1b1b1b",
+   "roughness": 0.4,
+   "tags": [
+    "appliance"
+   ]
+  },
+  {
+   "id": "upvc-white",
+   "kind": "plain",
+   "color": "#f2f2f0",
+   "roughness": 0.35,
+   "tags": [
+    "window"
+   ]
+  },
+  {
+   "id": "aluminium-dark",
+   "kind": "plain",
+   "color": "#3a3b3d",
+   "roughness": 0.4,
+   "metalness": 0.7,
+   "tags": [
+    "window"
+   ]
+  },
+  {
+   "id": "glass-clear",
+   "kind": "glass",
+   "color": "#dfeef3",
+   "opacity": 0.18,
+   "tags": [
+    "glass"
+   ]
+  },
+  {
+   "id": "glass-frosted",
+   "kind": "glass",
+   "color": "#eef3f4",
+   "opacity": 0.75,
+   "roughness": 0.6,
+   "tags": [
+    "glass"
+   ]
+  },
+  {
+   "id": "mirror",
+   "kind": "mirror",
+   "color": "#e8eef0",
+   "tags": [
+    "glass"
+   ]
+  },
+  {
+   "id": "screen-black",
+   "kind": "plain",
+   "color": "#0e0f10",
+   "roughness": 0.15,
+   "metalness": 0.2,
+   "tags": [
+    "appliance"
+   ]
+  },
+  {
+   "id": "lamp-warm",
+   "kind": "emissive",
+   "color": "#fff1d6",
+   "emissive": "#ffe2b0",
+   "emissiveIntensity": 2.5,
+   "tags": [
+    "light"
+   ]
+  },
+  {
+   "id": "flame",
+   "kind": "emissive",
+   "color": "#ffb347",
+   "emissive": "#ff9a2e",
+   "emissiveIntensity": 4,
+   "tags": [
+    "light",
+    "puja"
+   ]
+  },
+  {
+   "id": "marigold",
+   "kind": "plain",
+   "color": "#f29a1a",
+   "roughness": 0.9,
+   "tags": [
+    "puja",
+    "decor"
+   ]
+  },
+  {
+   "id": "kumkum-red",
+   "kind": "plain",
+   "color": "#a3201c",
+   "roughness": 0.7,
+   "tags": [
+    "puja",
+    "decor"
+   ]
+  },
+  {
+   "id": "plant-green",
+   "kind": "plain",
+   "color": "#3f6b2a",
+   "roughness": 0.8,
+   "tags": [
+    "decor"
+   ]
+  },
+  {
+   "id": "terracotta",
+   "kind": "plain",
+   "color": "#b0603c",
+   "roughness": 0.85,
+   "tags": [
+    "decor"
+   ]
+  },
+  {
+   "id": "grass-lawn",
+   "kind": "grass",
+   "color": "#4d7a30",
+   "color2": "#6a9a3f",
+   "scale": 2,
+   "roughness": 1,
+   "tags": [
+    "outdoor"
+   ],
+   "maps": {
+    "color": "textures/aerial_grass_rock/aerial_grass_rock_diff_1k.jpg",
+    "normal": "textures/aerial_grass_rock/aerial_grass_rock_nor_gl_1k.jpg",
+    "roughness": "textures/aerial_grass_rock/aerial_grass_rock_rough_1k.jpg"
+   },
+   "mapScale": 4,
+   "normalScale": 1,
+   "source": "polyhaven:aerial_grass_rock"
+  },
+  {
+   "id": "pavers-grey",
+   "kind": "pavers",
+   "color": "#8f8b85",
+   "color2": "#a39e97",
+   "grout": "#6c6863",
+   "tiles": 4,
+   "scale": 1.2,
+   "roughness": 0.9,
+   "bump": 0.8,
+   "tags": [
+    "outdoor",
+    "floor"
+   ],
+   "maps": {
+    "color": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_diff_1k.jpg",
+    "normal": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_nor_gl_1k.jpg",
+    "roughness": "textures/interlocking_concrete_pavers/interlocking_concrete_pavers_rough_1k.jpg"
+   },
+   "mapScale": 2,
+   "normalScale": 1,
+   "source": "polyhaven:interlocking_concrete_pavers"
+  },
+  {
+   "id": "concrete-grey",
+   "kind": "concrete",
+   "color": "#9a968f",
+   "scale": 3,
+   "roughness": 0.95,
+   "tags": [
+    "outdoor"
+   ],
+   "maps": {
+    "color": "textures/concrete_floor_02/concrete_floor_02_diff_1k.jpg",
+    "normal": "textures/concrete_floor_02/concrete_floor_02_nor_gl_1k.jpg",
+    "roughness": "textures/concrete_floor_02/concrete_floor_02_rough_1k.jpg"
+   },
+   "mapScale": 4,
+   "normalScale": 1,
+   "source": "polyhaven:concrete_floor_02"
+  },
+  {
+   "id": "curtain-linen",
+   "kind": "fabric",
+   "color": "#e6dccb",
+   "scale": 0.4,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "curtain"
+   ],
+   "maps": {
+    "normal": "textures/rough_linen/rough_linen_nor_gl_1k.jpg",
+    "roughness": "textures/rough_linen/rough_linen_rough_1k.jpg"
+   },
+   "mapScale": 0.6,
+   "normalScale": 0.7,
+   "source": "polyhaven:rough_linen"
+  },
+  {
+   "id": "curtain-sage",
+   "kind": "fabric",
+   "color": "#9aa88f",
+   "scale": 0.4,
+   "roughness": 0.95,
+   "tags": [
+    "fabric",
+    "curtain"
+   ],
+   "maps": {
+    "normal": "textures/rough_linen/rough_linen_nor_gl_1k.jpg",
+    "roughness": "textures/rough_linen/rough_linen_rough_1k.jpg"
+   },
+   "mapScale": 0.6,
+   "normalScale": 0.7,
+   "source": "polyhaven:rough_linen"
+  },
+  {
+   "id": "tile-bath-marble-grey",
+   "kind": "tiles",
+   "color": "#d9d9d6",
+   "color2": "#c9c9c6",
+   "grout": "#b9b9b4",
+   "tiles": 1,
+   "scale": 0.6,
+   "roughness": 0.18,
+   "photoGrout": true,
+   "maps": {
+    "color": "textures/marble_01/marble_01_rough_2k.jpg",
+    "normal": "textures/marble_01/marble_01_nor_gl_2k.jpg"
+   },
+   "mapScale": 1.2,
+   "normalScale": 0.2,
+   "tags": [
+    "wall",
+    "wet",
+    "tile",
+    "marble"
+   ],
+   "description": "2x2 ft grey-white marble-look wall tile (bathroom dado)",
+   "source": "polyhaven:marble_01 (roughness map used as albedo)"
+  }
+ ]
+}
