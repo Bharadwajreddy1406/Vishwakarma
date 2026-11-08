@@ -1,0 +1,29 @@
+{
+  "name": "demo-project",
+  "created": "2026-11-08T12:25:22.785Z",
+  "updated": "2026-11-08T12:30:34.447Z",
+  "stages": {
+    "extract": {
+      "state": "done",
+      "at": "2026-11-08T12:25:36.938Z",
+      "note": "input\\floor-plan.png"
+    },
+    "interpret": {
+      "state": "done",
+      "at": "2026-11-08T12:29:13.794Z"
+    },
+    "verify": {
+      "state": "done",
+      "at": "2026-11-08T12:29:16.319Z"
+    },
+    "furnish": {
+      "state": "done",
+      "at": "2026-11-08T12:30:34.295Z",
+      "note": "34 objects, 15 shared generators, 0 new"
+    },
+    "play": {
+      "state": "done",
+      "at": "2026-11-08T12:30:34.446Z"
+    }
+  }
+}

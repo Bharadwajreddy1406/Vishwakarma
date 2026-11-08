@@ -1,0 +1,105 @@
+{
+  "kind": "image",
+  "file": "input/floor-plan.png",
+  "units_per_m": 41.5,
+  "origin": [62, 689],
+  "crop": [48, 42, 392, 700],
+  "ignore": [],
+  "site": {
+    "north_deg": 0,
+    "floor": 0,
+    "unit": "left house (sheet shows two mirror-image 25'x50' houses)",
+    "entrance": "d_main",
+    "outside": [
+      { "kind": "garden", "polygon": [[3.98, 13.95], [7.42, 13.95], [7.42, 15.06], [3.98, 15.06]] },
+      { "kind": "garden", "polygon": [[0.22, 0.1], [3.5, 0.1], [3.5, 1.37], [0.22, 1.37]] },
+      { "kind": "paving", "polygon": [[-1.5, -4.0], [9.2, -4.0], [9.2, -0.05], [-1.5, -0.05]] }
+    ]
+  },
+  "defaults": { "wall_height": 3.048, "door_height": 2.134, "window_sill": 0.9, "window_height": 1.2 },
+  "walls": [
+    { "id": "w_west",    "a": [66.5, 627.5], "b": [66.5, 59.5],  "t": 9, "exterior": true },
+    { "id": "w_north",   "a": [66.5, 59.5],  "b": [225, 59.5],   "t": 9, "exterior": true },
+    { "id": "w_court_n", "a": [225, 59.5],   "b": [374.5, 59.5], "t": 4, "exterior": true, "height": 1.0 },
+    { "id": "w_east",    "a": [374.5, 59.5], "b": [374.5, 687],  "t": 9, "exterior": true },
+    { "id": "w_bed2_s",  "a": [66.5, 627.5], "b": [210, 627.5],  "t": 9, "exterior": true },
+    { "id": "w_bed2_e",  "a": [210, 469.5],  "b": [210, 627.5],  "t": 10, "exterior": true },
+    { "id": "w_garden_w","a": [66.5, 627.5], "b": [66.5, 687],   "t": 5, "exterior": true, "height": 1.0 },
+    { "id": "w_garden_s","a": [66.5, 687],   "b": [212, 687],    "t": 4, "exterior": true, "height": 1.0 },
+
+    { "id": "w_mid",     "a": [225, 59.5],   "b": [225, 412.5],  "t": 4 },
+    { "id": "w_court_s", "a": [225, 114.5],  "b": [374.5, 114.5],"t": 9, "exterior": true },
+    { "id": "w_kit_s",   "a": [66.5, 209.5], "b": [225, 209.5],  "t": 5 },
+    { "id": "w_t1_w",    "a": [111, 209.5],  "b": [111, 264.5],  "t": 4 },
+    { "id": "w_t1_s",    "a": [66.5, 264.5], "b": [225, 264.5],  "t": 5 },
+    { "id": "w_liv_n",   "a": [278, 264.5],  "b": [374.5, 264.5],"t": 5 },
+    { "id": "w_bed1_s",  "a": [66.5, 412.5], "b": [225, 412.5],  "t": 5 },
+    { "id": "w_t2_e",    "a": [161.5, 412.5],"b": [161.5, 467],  "t": 5 },
+    { "id": "w_bed2_n",  "a": [66.5, 467],   "b": [210, 467],    "t": 5 },
+    { "id": "w_liv_s",   "a": [210, 469.5],  "b": [374.5, 469.5],"t": 9, "exterior": true }
+  ],
+  "openings": [
+    { "id": "d_main",    "wall": "w_liv_s", "type": "door", "at": [288.5, 469.5], "width": 59, "leaves": 2, "hinge_at": [260, 469.5], "swing_toward": [288.5, 445], "connects": ["living", "outside"] },
+    { "id": "win_porch", "wall": "w_liv_s", "type": "window", "at": [229, 469.5], "width": 26 },
+
+    { "id": "o_kit_din", "wall": "w_mid", "type": "opening", "at": [225, 187.5], "width": 39, "connects": ["kitchen", "dining"] },
+    { "id": "d_bed1",    "wall": "w_mid", "type": "door", "at": [225, 286.5], "width": 37, "hinge_at": [225, 269], "swing_toward": [205, 286.5], "connects": ["living", "bed1"] },
+
+    { "id": "d_court",   "wall": "w_court_s", "type": "door", "at": [246.5, 114.5], "width": 39, "hinge_at": [229, 114.5], "swing_toward": [246.5, 140], "connects": ["dining", "outside"] },
+    { "id": "win_court", "wall": "w_court_s", "type": "window", "at": [326, 114.5], "width": 62 },
+
+    { "id": "d_t1",      "wall": "w_t1_s", "type": "door", "at": [207.5, 264.5], "width": 31, "hinge_at": [222, 264.5], "swing_toward": [207.5, 245], "connects": ["bed1", "toilet1"] },
+    { "id": "v_t1",      "wall": "w_t1_w", "type": "ventilator", "at": [111, 237.5], "width": 25, "sill": 1.8, "height": 0.6 },
+
+    { "id": "d_t2",      "wall": "w_t2_e", "type": "door", "at": [161.5, 450], "width": 30, "hinge_at": [161.5, 464], "swing_toward": [140, 450], "connects": ["passage", "toilet2"] },
+    { "id": "d_bed2",    "wall": "w_bed2_n", "type": "door", "at": [187, 467], "width": 36, "hinge_at": [203, 467], "swing_toward": [187, 490], "connects": ["passage", "bed2"] },
+    { "id": "win_bed2_s","wall": "w_bed2_s", "type": "window", "at": [139.5, 627.5], "width": 75 }
+  ],
+  "rooms": [
+    { "id": "kitchen", "name": "Kitchen",  "type": "kitchen", "rect": [71, 64, 223, 207],   "labeled": { "text": "12'0\"X11'4\"" } },
+    { "id": "dining",  "name": "Dining",   "type": "dining",  "rect": [227, 119, 370, 262], "labeled": { "text": "11'4\"X11'4\"" } },
+    { "id": "shaft1",  "name": "Duct",     "type": "other",   "rect": [71, 212, 109, 262] },
+    { "id": "toilet1", "name": "Toilet",   "type": "toilet",  "rect": [113, 212, 223, 262], "labeled": { "text": "8'8\"X4'0\"" } },
+    { "id": "bed1",    "name": "Bedroom",  "type": "master_bedroom", "rect": [71, 267, 223, 410], "labeled": { "text": "12'0\"X11'4\"" } },
+    { "id": "living",  "name": "Living",   "type": "living",  "rect": [227, 267, 370, 465], "labeled": { "text": "11'4\"X15'8\"" } },
+    { "id": "toilet2", "name": "Toilet",   "type": "toilet",  "rect": [71, 415, 159, 465],  "labeled": { "text": "7'0\"X4'0\"" } },
+    { "id": "passage", "name": "Passage",  "type": "passage", "rect": [164, 415, 227, 465] },
+    { "id": "bed2",    "name": "Bedroom",  "type": "bedroom", "rect": [71, 469.5, 205, 623], "labeled": { "text": "12'0\"X12'2\"", "gate": false } },
+    { "id": "porch",   "name": "Porch",    "type": "parking", "rect": [215, 474, 370, 686], "labeled": { "text": "12'8\"X16'8\"", "gate": false } }
+  ],
+  "fixtures": [
+    { "kind": "counter_l",  "room": "kitchen", "rect": [71, 64, 223, 166] },
+    { "kind": "hob",        "room": "kitchen", "rect": [154, 69, 191, 86] },
+    { "kind": "sink",       "room": "kitchen", "rect": [94, 64, 119, 92] },
+    { "kind": "dining_table_3x2", "room": "dining", "rect": [271, 118, 363, 184] },
+    { "kind": "tv_unit",    "room": "dining", "rect": [286, 249, 343, 260], "rotation": 180 },
+    { "kind": "sofa_l",     "room": "living", "rect": [270, 268, 367, 365] },
+    { "kind": "coffee_table","room": "living", "rect": [273, 329, 313, 356] },
+    { "kind": "wardrobe",   "room": "bed1", "rect": [111, 267, 181, 283] },
+    { "kind": "bed_queen",  "room": "bed1", "rect": [71, 322, 161, 379], "rotation": 90 },
+    { "kind": "side_table", "room": "bed1", "rect": [72, 300, 93, 317] },
+    { "kind": "side_table", "room": "bed1", "rect": [72, 382, 93, 399] },
+    { "kind": "wc",         "room": "toilet1", "rect": [129, 212, 144, 234] },
+    { "kind": "wash_basin", "room": "toilet1", "rect": [199, 212, 223, 231] },
+    { "kind": "wc",         "room": "toilet2", "rect": [71, 441, 93, 452], "rotation": 270 },
+    { "kind": "wash_basin", "room": "toilet2", "rect": [134, 415, 157, 429] },
+    { "kind": "wardrobe",   "room": "bed2", "rect": [90, 469.5, 160, 485] },
+    { "kind": "bed_queen",  "room": "bed2", "rect": [71, 535, 161, 593], "rotation": 90 },
+    { "kind": "side_table", "room": "bed2", "rect": [72, 514, 93, 531] },
+    { "kind": "side_table", "room": "bed2", "rect": [72, 597, 93, 616] },
+    { "kind": "car",        "room": "porch", "rect": [219, 515, 290, 664] },
+    { "kind": "staircase",  "room": "porch", "rect": [299, 471, 370, 675] }
+  ],
+  "notes": [
+    "Source: 2dhouses-style raster sheet (848x721 px) showing two mirror-image 25'0\" x 50'0\" houses; the LEFT house was interpreted (assumed by agent; right one is its mirror).",
+    "Scale: 41.5 px/m. Overall 25'0\" = 317 px (41.6), 50'0\" = 635 px (41.7); rooms: kitchen 152/12'0\" (41.6), dining 143/11'4\" (41.4), toilet1 110/8'8\" (41.6), living 198/15'8\" (41.5), toilet2 88/7'0\" (41.2). Spread ~1%; image resolution is ~2.4 cm per px so the ±3 cm gate is near the pixel limit.",
+    "Orientation: no north arrow on the sheet. Assumed porch/road on the south (north_deg 0, north up the drawing).",
+    "CONFLICT bedroom (front, bed2): drawn clear width 134 px = 3.23 m (10'7\") vs label 12'0\"; depth 12'2\" agrees. Geometry kept, label gate=false.",
+    "CONFLICT porch: drawn clear width 155 px = 3.73 m (12'3\") vs label 12'8\"; length 16'8\" agrees. Label includes the staircase; gate=false.",
+    "Back court (x 227-370, y 64-110 px) is an open-to-sky planter court reached from the dining door; modelled as garden with a 1.0 m parapet on the north. Front planter strip below bedroom 2 likewise (1.0 m compound walls).",
+    "Duct/shaft boxes (X symbols) next to toilet 1 and in toilet 2 corner: toilet-1 one modelled as room 'Duct' (other) with a ventilator; the tiny one in toilet 2 ignored.",
+    "Kitchen opens to dining through a 0.94 m gap (no door drawn) — modelled as an 'opening'. Bedroom 1 has no exterior window on the drawing; the symbols on the bedroom/living wall are ambiguous and not modelled.",
+    "Wall thicknesses as drawn: 9 px (≈22 cm) exterior, 4-5 px (≈11 cm) interior partitions.",
+    "Staircase in the porch leads to an upper floor not shown; drawn as a fixture only."
+  ]
+}
